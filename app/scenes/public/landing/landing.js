@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-   
-</head>
-<body>
-    <!-- Start francisco -->
+import './style.css'
 
-    <!-- Finish francisco -->
-    <!-- Start alejandro -->
-    <section id="mainDestinations">
+export async function landingPage() {
+    const root = document.getElementById('root');
+
+    root.innerHTML =`
+        <section id="mainDestinations">
         <h1>
             Principales Destinos
         </h1>
@@ -25,8 +18,8 @@
                 </span>
             </form>
         </div>
-  
-        <div id="places">
+
+            <div id="places">
             <a href="" class="containerPLaces" id="c_1">
 
                 <h2>
@@ -79,14 +72,10 @@
 
             </a>
         </div>
-    </section>
-    <!-- Finish alejandro -->
-    <!-- Start juan_pablo -->
+      </section>
+    `
+    ;
+        
+}
 
-    <!-- Finish juan_pablo -->
-    <!-- Start samuel -->
-
-    <!-- Finish samuel -->
-    <script src="./scripts/index.js"></script>
-</body>
-</html>
+console.log("la puta madre");
