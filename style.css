@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,14 +9,14 @@
     text-decoration: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 :root {
-    --light-blue-: #89CFF0;
-    --lavander-purple-: #E6E6FA;
-    --gpastel-yellow-: #FFF8DC;
+    --blue-: #254453;
+    --beige-: #FFF8DC;
     --black-: #0D0D0D;
     --white-: #FFFFFF;
 
@@ -29,6 +29,55 @@ html{
     --font-weight-medium-text-: 500;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--titleFont);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+
+    font-size: 27px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Start francisco */
+
+/* Finish francisco */
+/* Start alejandro */
+
+/* Finish alejandro */
+/* Start juan_pablo*/
+
+/* Finish juan_pablo */
+/* Start samuel */
+.section-dashHero {
+    height: 100vh;
+    width: 100%;
+}
+
+.menu-dashHero{
+    background-color: #FFF8DC;
+}
+
+
+/* Finish samuel */
+
+/********* Start Responsive ************/
 /* Start francisco */
 
 /* Finish francisco */
@@ -41,3 +90,4 @@ html{
 /* Start samuel */
 
 /* Finish samuel */
+/*********** Finish Responsive ***********/
