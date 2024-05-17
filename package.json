@@ -4,7 +4,7 @@
   "description": "this is a project for a tourism page that will be carried out in the javascript module",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "index.html"
   },
   "repository": {
     "type": "git",
