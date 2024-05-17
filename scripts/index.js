@@ -1,10 +1,3 @@
-// Start francisco
-
-// Finish francisco
-// Start alejandro
-
-// Finish alejandro
-// START JUAN PABLO
 /**Paremetros del metodo addEventListener
  * - tipo de evento
  * - funcion ah ejecutar
@@ -13,7 +6,7 @@
  * la funcion
  */
 document.addEventListener('DOMContentLoaded', function () {
-  const tarjetasPrincipales = document.querySelectorAll('.main');
+  const tarjetasPrincipales = document.querySelectorAll('.cards-highlights');
   /**En el primer forEach se esta iterando sobre todas las tarjetas tarjetasPrincipales
    * y se les esta asignando un escuchador de eventos
    */
@@ -41,7 +34,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-// Finish juan_pablo
-// Start samuel
-
-// Finish samuel
