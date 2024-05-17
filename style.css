@@ -15,8 +15,8 @@ html {
 }
 
 :root {
-    --blue-: #254453;
-    --beige-: #FFF8DC;
+    --blue-: var(--blue-);
+    --beige-: var(--beige-);
     --black-: #0D0D0D;
     --white-: #FFFFFF;
 
@@ -56,7 +56,125 @@ img {
 }
 
 /* Start francisco */
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--blue-);
+}
 
+.nav-logo {
+    min-width: 100px;
+    max-width: 101px;
+    height: 44px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-menu {
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    background-color: var(--primary-color);
+    list-style-type: none;
+    gap: 10px;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-menu li a {
+    color: var(--white-);
+    padding: 5px;
+    display: flex;
+}
+
+.nav-menu li a:hover {
+    border-radius: 5px;
+    background-color: var(--beige-);
+    color: var(--blue-);
+}
+
+.menu-toggle {
+    order: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+[aria-expanded='true']+.nav-menu {
+    display: flex
+}
+
+.menu-toggle:hover {
+    border: 2px var(--beige-) solid;
+}
+
+.access {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: -7px;
+    bottom: -65px;
+    background-color: var(--beige-);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    list-style-type: none;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.submenu li {
+    padding: 8px 12px;
+}
+
+.submenu li a {
+    color: var(--blue-);
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.submenu li a:hover {
+    background-color: var(--blue-);
+    color: var(--beige-);
+
+}
+
+.access:hover .submenu {
+    display: block;
+}
+
+#submenu-btn {
+    background-color: var(--beige-);
+    color: var(--blue-);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 /* Finish francisco */
 /* Start alejandro */
 
@@ -70,7 +188,22 @@ img {
 
 /********* Start Responsive ************/
 /* Start francisco */
+@media screen and (min-width: 625px) {
+    .menu-toggle {
+        display: none;
+    }
 
+    .nav-menu {
+        display: flex;
+        position: static;
+        order: 1;
+    }
+
+    .access {
+        order: 2;
+    }
+
+}
 /* Finish francisco */
 /* Start alejandro */
 
