@@ -1,3 +1,10 @@
+// Start francisco
+
+// Finish francisco
+// Start alejandro
+
+// Finish alejandro
+// START JUAN PABLO
 /**Paremetros del metodo addEventListener
  * - tipo de evento
  * - funcion ah ejecutar
@@ -34,3 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+// Finish juan_pablo
+// Start samuel
+
+// Finish samuel

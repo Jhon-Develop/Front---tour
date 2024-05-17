@@ -255,7 +255,7 @@ html{
 .see-more button:hover {
     background-color: #0056b3;
 }
-/*MEDIA QUERYS PARA TAMAÑOS 1162 ENTRE 1494 CON UN MAXIMO DE 1900*/
+/*MEDIA QUERYS PARA TAMAÑOS ENTRE 1494 CON UN MAXIMO DE 1900*/
 @media screen and (min-width: 1494px) and (max-width: 1920px) {
   .P-section-highlights {
     grid-gap: 10px;
@@ -297,7 +297,7 @@ html{
 }
 
 
-/*MEDIA QUERYS PARA TAMAÑOS MINIMOS ENTRE 821 CON UN MAXIMO DE 1161*/
+/*MEDIA QUERYS PARA TAMAÑOS ENTRE 821 CON UN MAXIMO DE 1161*/
 @media screen and (min-width: 821px)and (max-width: 1161px) {
   .P-section-highlights {
     margin-right: 10px;
