@@ -22,7 +22,7 @@ html {
 
 
     --font-family-title: 'Roboto', sans-serif;
-    --font-family-title: 'Prompt', sans-serif;
+    --font-family-title-two: 'Prompt', sans-serif;
     --font-weight-regular-title-: 400;
     --font-weight-medium-title-: 700;
     --font-weight-regular-text-: 200;
@@ -254,7 +254,7 @@ nav {
 }
 
 .select-profile{
-    padding-top: 20px;
+    padding-top: 10px;
     font-weight: 400;
     color: var(--white-);
 }
