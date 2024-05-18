@@ -5,8 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: solid 1px red;
     text-decoration: none;
+    border: red solid 1px;
 }
 
 html {
@@ -22,7 +22,7 @@ html {
 
 
     --font-family-title: 'Roboto', sans-serif;
-    --font-family-title: 'Prompt', sans-serif;
+    --font-family-title-two: 'Prompt', sans-serif;
     --font-weight-regular-title-: 400;
     --font-weight-medium-title-: 700;
     --font-weight-regular-text-: 200;
@@ -100,6 +100,7 @@ img {
 
 .menu-dashHero h2 {
     color: var(--beige-);
+    font-family: var(--font-family-title);
 }
 
 .table_one_hero , .table_two_hero{
@@ -113,7 +114,7 @@ img {
 .footer-home {
     background-color: var(--blue-);
     width: 100%;
-    height: 40vh;
+    height: 45vh;
     display: flex;
 }
 
@@ -136,10 +137,12 @@ img {
 }
 .column-info-footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
     width: 100%;
+    height: 100%;
 }
 
 .info-contact , .info-adress{
@@ -148,6 +151,7 @@ img {
     font-size: 20px;
     font-family: var(--font-family-title);
     list-style: none;
+    height: 100%;
 }
 
 .contain-info-adress {
@@ -155,12 +159,17 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .info-contact ul, .info-adress ul{
     list-style: none;
     color: var(--beige-);
     font-weight:  bold;
+}
+
+.info-contact ul li, .info-adress ul li{
+    padding: 5px;
 }
 
 .info-contact ul li:hover, .info-adress ul li:hover{
@@ -175,11 +184,13 @@ img {
     font-size: 10px;
     font-family: var(--font-family-title);
     color: var(--beige-);
+    
 }
 
-.social-media-footer img {
+.social-media-footer svg {
     height: 50px;
     width: 50px;
+    margin: 10px;
 }
 /* Finish samuel */
 
@@ -194,6 +205,40 @@ img {
 
 /* Finish juan_pablo */
 /* Start samuel */
-
+/* ------------------------- tablet-----*/
+@media screen and (min-width: 600px) and (max-width:920px) {
+    .section-dashHero {
+        height: 80vh;
+    }
+    .social-media-footer svg {
+        margin: 3px;
+    }
+    .article-img {
+        flex: 0 0 calc(100%/ 1);
+    }
+}
+/* ------------------------- mobile -----*/
+@media screen and (max-width :599px) {
+    .section-dashHero {
+        height: 70vh;
+    }
+    .menu-dashHero h2 {
+        font-size: 13px;
+    }
+    .footer-home{
+        height: 30vh;
+    }
+    .info-contact , .info-adress{
+        font-size: 10px;
+    }
+    .social-media-footer svg {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+    }
+    .info-contact , .info-adress{
+    padding: 10px;
+}
+}
 /* Finish samuel */
 /*********** Finish Responsive ***********/
