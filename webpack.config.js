@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: './app/scenes/public/landing/landing.js',
+    // mode: 'development',
+    entry: './app/index.js',
     output: {
         path: path.resolve(__dirname, 'bundle'),
         filename: 'bundle.js',
@@ -14,14 +14,14 @@ module.exports = {
     module:{
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js$/i,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
             },
             {
-               test: /\.css$/,
+               test: /\.css$/i,
                use: [
                 MiniCssExtractPlugin.loader,
                     {
@@ -43,7 +43,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index1.html',
-            filname: 'index1.html'
+            filename: 'index.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
@@ -52,10 +52,10 @@ module.exports = {
     ],
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist')
+            directory: path.join(__dirname, 'bundle')
         },
         compress: true,
-        port: 9000,
+        port: 5500,
         historyApiFallback: {
             index: '/index1.html'
         }
