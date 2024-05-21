@@ -1,10 +1,10 @@
 class Footer {
   constructor() {
-    this.element = document.createElement('footer');
-    this.element.className = 'footer-home';
+    this.element = document.createElement("footer");
+    this.element.className = "footer-home";
     this.element.innerHTML = `
       <div class="contain_map_footer">
-        <div class="map-footer"></div>
+        <div class="map_footer"></div>
       </div>
       <div class="section_info_footer">
         <div class="column_info_footer">

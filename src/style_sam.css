@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: red solid 1px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: red solid 1px;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 :root {
-    --blue-: #254453;
-    --beige-: #FFF8DC;
-    --black-: #0D0D0D;
-    --white-: #FFFFFF;
+  --blue-: #254453;
+  --beige-: #fff8dc;
+  --black-: #0d0d0d;
+  --white-: #ffffff;
 
-
-    --font-family-title: 'Roboto', sans-serif;
-    --font-family-title-two: 'Prompt', sans-serif;
-    --font-weight-regular-title-: 400;
-    --font-weight-medium-title-: 700;
-    --font-weight-regular-text-: 200;
-    --font-weight-medium-text-: 500;
+  --font-family-title: "Roboto", sans-serif;
+  --font-family-title-two: "Prompt", sans-serif;
+  --font-weight-regular-title-: 400;
+  --font-weight-medium-title-: 700;
+  --font-weight-regular-text-: 200;
+  --font-weight-medium-text-: 500;
 }
 
 h1,
@@ -35,24 +34,23 @@ h3,
 h4,
 h5,
 h6 {
-    font-family:'Roboto', sans-serif;;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 h2 {
-
-    font-size: 27px;
+  font-size: 27px;
 }
 
 h3 {
-    font-size: 21px;
+  font-size: 21px;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* Start francisco */
@@ -68,129 +66,132 @@ img {
 /* ----------------------dashboard home landing page--- */
 
 .section-dashHero {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-}
-
-.menu_dashHero{
-    background-color: var(--blue-);
-}
-
-.place_dashHero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    height: 100%;
-    width: 70%;
-    padding: 30px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
 }
 
 .menu_dashHero {
-    width: 30%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+  background-color: var(--blue-);
+}
+
+.place_dashHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  width: 70%;
+  padding: 30px;
+}
+
+.menu_dashHero {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
 .menu_dashHero h2 {
-    color: var(--beige-);
-    font-family: var(--font-family-title);
+  color: var(--beige-);
+  font-family: var(--font-family-title);
 }
 
-.table_one_hero , .table_two_hero{
-    width: 80%;
-    height: 50%;
-    border-radius: 20px;
+.table_one_hero,
+.table_two_hero {
+  width: 80%;
+  height: 50%;
+  border-radius: 20px;
 }
 /* ------------------------- footer -----*/
 
-
 .footer-home {
-    background-color: var(--blue-);
-    width: 100%;
-    height: 45vh;
-    display: flex;
+  background-color: var(--blue-);
+  width: 100%;
+  height: 45vh;
+  display: flex;
 }
 
-.map-footer {
-    border-radius: 20px;
-    background: url(/src/google-maps-22-1200x675.jpg);
-    width: 80%;
-    height: 80%;
+.map_footer {
+  border-radius: 20px;
+  background: url(/src/google-maps-22-1200x675.jpg);
+  width: 80%;
+  height: 80%;
 }
 
 .contain_map_footer {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section_info_footer {
-    width: 60%;
+  width: 60%;
 }
 .column_info_footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding-top: 50px;
-    padding-bottom: 10px;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
 }
 
-.info_contact , .info_adress{
-    width: fit-content;
-    padding: 30px;
-    font-size: 20px;
-    font-family: var(--font-family-title);
-    list-style: none;
-    height: 100%;
+.info_contact,
+.info_adress {
+  width: fit-content;
+  padding: 30px;
+  font-size: 20px;
+  font-family: var(--font-family-title);
+  list-style: none;
+  height: 100%;
 }
 
 .contain_info_adress {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.info_contact ul, .info_adress ul{
-    list-style: none;
-    color: var(--beige-);
-    font-weight:  bold;
+.info_contact ul,
+.info_adress ul {
+  list-style: none;
+  color: var(--beige-);
+  font-weight: bold;
 }
 
-.info_contact ul li, .info_adress ul li{
-    padding: 5px;
+.info_contact ul li,
+.info_adress ul li {
+  padding: 5px;
 }
 
-.info_contact ul li:hover, .info_adress ul li:hover{
-    color: white;
+.info_contact ul li:hover,
+.info_adress ul li:hover {
+  color: white;
 }
 
 .social_media_footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 10px;
-    font-family: var(--font-family-title);
-    color: var(--beige-);
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-family: var(--font-family-title);
+  color: var(--beige-);
 }
 
 .social_media_footer svg {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
 }
 /* Finish samuel */
 
@@ -206,39 +207,41 @@ img {
 /* Finish juan_pablo */
 /* Start samuel */
 /* ------------------------- tablet-----*/
-@media screen and (min-width: 600px) and (max-width:920px) {
-    .section-dashHero {
-        height: 80vh;
-    }
-    .social_media_footer svg {
-        margin: 3px;
-    }
-    .article-img {
-        flex: 0 0 calc(100%/ 1);
-    }
+@media screen and (min-width: 600px) and (max-width: 920px) {
+  .section-dashHero {
+    height: 80vh;
+  }
+  .social_media_footer svg {
+    margin: 3px;
+  }
+  .article-img {
+    flex: 0 0 calc(100% / 1);
+  }
 }
 /* ------------------------- mobile -----*/
-@media screen and (max-width :599px) {
-    .section-dashHero {
-        height: 70vh;
-    }
-    .menu_dashHero h2 {
-        font-size: 13px;
-    }
-    .footer-home{
-        height: 30vh;
-    }
-    .info_contact , .info_adress{
-        font-size: 10px;
-    }
-    .social_media_footer svg {
-        height: 20px;
-        width: 20px;
-        margin: 5px;
-    }
-    .info_contact , .info_adress{
+@media screen and (max-width: 599px) {
+  .section-dashHero {
+    height: 70vh;
+  }
+  .menu_dashHero h2 {
+    font-size: 13px;
+  }
+  .footer-home {
+    height: 30vh;
+  }
+  .info_contact,
+  .info_adress {
+    font-size: 10px;
+  }
+  .social_media_footer svg {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+  }
+  .info_contact,
+  .info_adress {
     padding: 10px;
-}
+  }
 }
 /* Finish samuel */
 /*********** Finish Responsive ***********/
