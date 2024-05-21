@@ -73,11 +73,11 @@ img {
     display: flex;
 }
 
-.menu-dashHero{
+.menu_dashHero{
     background-color: var(--blue-);
 }
 
-.place-dashHero{
+.place_dashHero{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,7 +88,7 @@ img {
     padding: 30px;
 }
 
-.menu-dashHero {
+.menu_dashHero {
     width: 30%;
     height: 100%;
     text-align: center;
@@ -98,7 +98,7 @@ img {
     padding: 20px;
 }
 
-.menu-dashHero h2 {
+.menu_dashHero h2 {
     color: var(--beige-);
     font-family: var(--font-family-title);
 }
@@ -125,17 +125,17 @@ img {
     height: 80%;
 }
 
-.contain-map-footer {
+.contain_map_footer {
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.section-info-footer {
+.section_info_footer {
     width: 60%;
 }
-.column-info-footer {
+.column_info_footer {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -145,7 +145,7 @@ img {
     height: 100%;
 }
 
-.info-contact , .info-adress{
+.info_contact , .info_adress{
     width: fit-content;
     padding: 30px;
     font-size: 20px;
@@ -154,7 +154,7 @@ img {
     height: 100%;
 }
 
-.contain-info-adress {
+.contain_info_adress {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,21 +162,21 @@ img {
     height: 100%;
 }
 
-.info-contact ul, .info-adress ul{
+.info_contact ul, .info_adress ul{
     list-style: none;
     color: var(--beige-);
     font-weight:  bold;
 }
 
-.info-contact ul li, .info-adress ul li{
+.info_contact ul li, .info_adress ul li{
     padding: 5px;
 }
 
-.info-contact ul li:hover, .info-adress ul li:hover{
+.info_contact ul li:hover, .info_adress ul li:hover{
     color: white;
 }
 
-.social-media-footer {
+.social_media_footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -187,7 +187,7 @@ img {
     
 }
 
-.social-media-footer svg {
+.social_media_footer svg {
     height: 50px;
     width: 50px;
     margin: 10px;
@@ -210,7 +210,7 @@ img {
     .section-dashHero {
         height: 80vh;
     }
-    .social-media-footer svg {
+    .social_media_footer svg {
         margin: 3px;
     }
     .article-img {
@@ -222,21 +222,21 @@ img {
     .section-dashHero {
         height: 70vh;
     }
-    .menu-dashHero h2 {
+    .menu_dashHero h2 {
         font-size: 13px;
     }
     .footer-home{
         height: 30vh;
     }
-    .info-contact , .info-adress{
+    .info_contact , .info_adress{
         font-size: 10px;
     }
-    .social-media-footer svg {
+    .social_media_footer svg {
         height: 20px;
         width: 20px;
         margin: 5px;
     }
-    .info-contact , .info-adress{
+    .info_contact , .info_adress{
     padding: 10px;
 }
 }
