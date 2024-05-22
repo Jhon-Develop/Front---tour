@@ -6,37 +6,37 @@
 // Finish alejandro
 // START JUAN PABLO
 /**Paremetros del metodo addEventListener
- * - tipo de evento
- * - funcion ah ejecutar
- * - captura
+ * _ tipo de evento
+ * _ funcion ah ejecutar
+ * _ captura
  * Primero se esta verificando que el dom haya sido cargado para ejecutar
  * la funcion
  */
 document.addEventListener('DOMContentLoaded', function () {
-  const tarjetasPrincipales = document.querySelectorAll('.cards-highlights');
-  /**En el primer forEach se esta iterando sobre todas las tarjetas tarjetasPrincipales
+  const cardMain = document.querySelectorAll('.cards_highlights');
+  /**En el primer forEach se esta iterando sobre todas las cards cardMain
    * y se les esta asignando un escuchador de eventos
    */
-  tarjetasPrincipales.forEach((tarjeta) => {
+  cardMain.forEach((card) => {
     // asignando el evento de click
-    tarjeta.addEventListener('click', () => {
-      //Vuelve y recorre el forEach de tarjetas principales es decir en las que no se hicieron click
-      // y luego compara si la en las tarjetas que no se hicieron click es diferente de la que hizo click
+    card.addEventListener('click', () => {
+      //Vuelve y recorre el forEach de cards principales es decir en las que no se hicieron click
+      // y luego compara si la en las cards que no se hicieron click es diferente de la que hizo click
       // y si es diferente las oculta
-      tarjetasPrincipales.forEach((e) => {
-        if (e !== tarjeta) {
-          e.querySelector('.more-information').style.display = 'none';
+      cardMain.forEach((e) => {
+        if (e !== card) {
+          e.querySelector('.more_information').style.display = 'none';
         }
       });
-      const detalles = tarjeta.querySelector('.more-information');
+      const details = card.querySelector('.more_information');
       // Se esta verificando si el estilo de elemento actual es estrictamente igual ah bloque,
-      // si esta condicion se cumple oculta todas las tarjetas
-      if (detalles.style.display === 'block') {
-        detalles.style.display = 'none';
+      // si esta condicion se cumple oculta todas las cards
+      if (details.style.display === 'block') {
+        details.style.display = 'none';
       }
-      // Si los detalles estan actulmente ocultos (none) se cambia el estilo de visualizacion ah bloque
+      // Si los details estan actulmente ocultos (none) se cambia el estilo de visualizacion ah bloque
       else {
-        detalles.style.display = 'block';
+        details.style.display = 'block';
       }
     });
   });

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Overlock+SC&family=Permanent+Marker&family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,24 +9,23 @@
     text-decoration: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 :root {
-    --light-blue-: #89CFF0;
-    --lavander-purple-: #E6E6FA;
-    --gpastel-yellow-: #FFF8DC;
-    --black-: #0D0D0D;
-    --white-: #FFFFFF;
+    --light_blue_: #89cff0;
+    --lavander_purple_: #e6e6fa;
+    --gpastel_yellow_: #fff8dc;
+    --black_: #0d0d0d;
+    --white_: #ffffff;
 
-
-    --font-family-title: 'Roboto', sans-serif;
-    --font-family-title: 'Prompt', sans-serif;
-    --font-weight-regular-title-: 400;
-    --font-weight-medium-title-: 700;
-    --font-weight-regular-text-: 200;
-    --font-weight-medium-text-: 500;
+    --font_family_title: 'Roboto', sans_serif;
+    --font_family_title: 'Prompt', sans_serif;
+    --font_weight_regular_title_: 400;
+    --font_weight_medium_title_: 700;
+    --font_weight_regular_text_: 200;
+    --font_weight_medium_text_: 500;
 }
 
 /* Start francisco */
@@ -34,21 +33,20 @@ html{
 /* Finish francisco */
 /* Start alejandro */
 
-
 /* Finish alejandro */
 /* Start juan_pablo*/
-.P-sub-title {
+.P_sub_title {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.P-sub-title h2 {
+.P_sub_title h2 {
     font-size: 2rem;
     color: #13236b;
 }
 
-.article-cards {
+.article_cards {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -56,7 +54,7 @@ html{
     margin: 0 auto;
 }
 
-.P-section-highlights {
+.P_section_highlights {
     width: 90%;
     padding: 110px 50px;
     display: grid;
@@ -65,7 +63,7 @@ html{
     gap: 2rem;
 }
 
-.cards-highlights {
+.cards_highlights {
     background-color: #fff8dc;
     border-radius: 16px;
     display: flex;
@@ -76,16 +74,16 @@ html{
     padding: 10px;
     width: 100%;
     max-width: 400px;
-    box-shadow: -3px -4px 12px 4px rgba(163, 155, 194, 1);
+    box-shadow: 3px 4px 12px 4px rgba(163, 155, 194, 1);
     margin: 0 auto;
 }
 
-.cards-highlights img {
+.cards_highlights img {
     width: 100%;
     border-radius: 16px;
 }
 
-.about-travel {
+.about_travel {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -95,7 +93,7 @@ html{
     gap: 10px;
 }
 
-.travel-name {
+.travel_name {
     text-align: left;
     width: 100%;
     color: #254453;
@@ -104,7 +102,7 @@ html{
     padding: 5px;
 }
 
-.button-price {
+.button_price {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,12 +114,12 @@ html{
     height: 80px;
 }
 
-.button-price p {
+.button_price p {
     color: #fff8dc;
     font-size: 1rem;
 }
 
-.travel-opinions {
+.travel_opinions {
     width: 100%;
     display: flex;
     align-items: center;
@@ -129,11 +127,11 @@ html{
     color: #254453;
 }
 
-.travel-opinions h2 {
+.travel_opinions h2 {
     font-size: 1.5rem;
 }
 
-.num-opinions {
+.num_opinions {
     display: flex;
     width: 100%;
     display: flex;
@@ -142,17 +140,17 @@ html{
     color: #254453;
 }
 
-.num-opinions p {
+.num_opinions p {
     font-size: 1rem;
     color: #254453;
 }
 
-.see-more {
+.see_more {
     text-align: center;
     width: 30%;
 }
 
-.see-more button {
+.see_more button {
     text-align: center;
     padding: 1.5rem;
     background-color: #254453;
@@ -162,11 +160,11 @@ html{
     border-radius: 16px;
 }
 
-.see-more button:hover {
+.see_more button:hover {
     background-color: #043459;
 }
 /* STYLES CART MORE INFORMATION*/
-.more-information {
+.more_information {
     position: absolute;
     top: 0;
     display: flex;
@@ -180,11 +178,11 @@ html{
     padding: 1rem;
 }
 
-.more-information:hover {
+.more_information:hover {
     background-color: #588cb7;
 }
 
-.more-information-text {
+.more_information_text {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -199,7 +197,7 @@ html{
     padding: 1rem;
 }
 
-.contain-add-booking {
+.contain_add_booking {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -209,7 +207,7 @@ html{
     gap: 10px;
 }
 
-.contain-add-booking h3 {
+.contain_add_booking h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,7 +222,7 @@ html{
     background-color: #fff8dc;
 }
 
-.contain-add-booking button {
+.contain_add_booking button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,10 +240,10 @@ html{
     background-color: #254453;
 }
 
-.travel-price-back {
+.travel_price_back {
     position: absolute;
     top: 78%;
-    right: -2%;
+    right: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,24 +254,24 @@ html{
     background-color: #fff8dc;
 }
 
-.travel-price-back p {
+.travel_price_back p {
     color: #13236b;
 }
 
 /* Media query para pantallas entre 1162px y 1920px */
 @media screen and (min-width: 1162px) and (max-width: 1920px) {
-    .P-section-highlights {
+    .P_section_highlights {
         gap: 2rem;
         margin-right: 10px;
         margin-bottom: 10px;
     }
 
-    .travel-name {
+    .travel_name {
         width: 100%;
         font-size: 1.1rem;
     }
 
-    .travel-opinions {
+    .travel_opinions {
         width: 100%;
         display: flex;
         align-items: center;
@@ -282,38 +280,37 @@ html{
         color: #254453;
     }
 
-    .button-price {
+    .button_price {
         width: 45%;
-        transform: translateY(-1%);
+        transform: translateY(1%);
         font-size: 1rem;
         right: 3%;
         padding: 0.1rem;
     }
 
-    .contain-add-booking h3 {
+    .contain_add_booking h3 {
         width: 55%;
         font-size: 1rem;
     }
 
-    .contain-add-booking button {
+    .contain_add_booking button {
         font-size: 0.8rem;
         width: 42%;
         text-align: center;
     }
 
-    .see-more button {
+    .see_more button {
         padding: 1rem;
     }
 }
 
 /* Media query para pantallas entre 830px y 1161px */
 @media screen and (min-width: 830px) and (max-width: 1161px) {
-
-    .travel-name {
+    .travel_name {
         width: 60%;
     }
 
-    .travel-opinions {
+    .travel_opinions {
         width: 85%;
         display: flex;
         align-items: center;
@@ -322,66 +319,67 @@ html{
         color: #254453;
     }
 
-    .button-price {
+    .button_price {
         width: 30%;
         height: 100%;
     }
 
-    .num-opinions {
+    .num_opinions {
         width: 100%;
     }
 
-    .more-information-text {
+    .more_information_text {
         margin-bottom: 1.5rem;
         padding: 1rem;
     }
 
-    .more-information-text p, h2 {
+    .more_information_text p,
+    h2 {
         font-size: 1rem;
     }
 
-    .contain-add-booking h3 {
+    .contain_add_booking h3 {
         width: 55%;
         font-size: 1rem;
     }
 
-    .contain-add-booking button {
+    .contain_add_booking button {
         font-size: 0.8rem;
         width: 42%;
         text-align: center;
     }
 
-    .travel-price-back {
+    .travel_price_back {
         width: 35%;
     }
 }
 
 /* Media query para pantallas entre 600px y 829px */
 @media screen and (max-width: 829px) {
-    .P-section-highlights {
+    .P_section_highlights {
         justify-content: center;
     }
-    
-    .cards-highlights {
+
+    .cards_highlights {
         width: 100%;
     }
 
-    .num-opinions {
+    .num_opinions {
         text-align: center;
     }
 
-    .button-price {
+    .button_price {
         top: 90%;
-        right: -1%;
+        right: 1%;
         height: 80px;
         width: 37%;
     }
 
-    .more-information-text {
+    .more_information_text {
         padding: 2rem;
     }
 
-    .travel-price-back {
+    .travel_price_back {
         top: 77%;
         right: -3%;
         height: 25%;
@@ -391,34 +389,33 @@ html{
 
 /* Media query para pantallas con tamños menores ah 600px */
 @media screen and (max-width: 600px) {
-
-    .cards-highlights {
+    .cards_highlights {
         width: 100%;
     }
-    
-    .num-opinions {
+
+    .num_opinions {
         text-align: center;
     }
 
-    .button-price {
+    .button_price {
         top: 90%;
-        right: -1%;
+        right: 1%;
         height: 80px;
         width: 37%;
     }
 
-    .more-information-text {
+    .more_information_text {
         padding: 1rem;
     }
 
-    .travel-price-back {
+    .travel_price_back {
         top: 77%;
-        right: -3%;
+        right: 3%;
         height: 25%;
         width: 30%;
     }
-    
-    .see-more button {
+
+    .see_more button {
         padding: 0.9rem;
     }
 }
