@@ -6,7 +6,8 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-
+  /* border: solid 1px red; */
+  font-family: var(--font-family-title);
 }
 
 html {
@@ -193,6 +194,140 @@ img {
   width: 50px;
   margin: 10px;
 }
+/* ------------------------- dashboard admin -----*/
+
+.section_dashboard_admin {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.menu_dash_admin {
+  background-color: var(--blue-);
+  width: 30%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu_dash_admin button{
+  padding: 10px;
+  width: 80%;
+  background-color: var(--blue-);
+  color: white;
+  border: 1px solid #4f6772;
+}
+
+.menu_dash_admin button:hover {
+  border-left: solid 2px white;
+  font-weight: bold;
+}
+
+.menu_dash_admin h2 {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+/* ------ targets description dashboard admin -----*/
+.place_dashboard_contain {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.table_stadistics {
+  height: 50vh;
+  width: 80%;
+  border: #254453 solid 1px;
+  border-radius: 20px;
+}
+
+.button_table_stadistics {
+  background-color: var(--blue-);
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  color: var(--white-);
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.button_table_stadistics:hover {
+  font-weight: bold;
+  color: var(--blue-);
+  background-color: var(--white-);
+  border-color: var(--blue-) 1px solid;
+}
+
+/* ------ targets description dashboard admin -----*/
+.target_description_dash {
+  display: flex;
+  height: 30vh;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.img_target_description {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contain_text_description{
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-);
+  border-radius: 0px 10px 10px 00px;
+}
+
+.title_tour_description {
+  width: 80%;
+  background-color: var(--beige-);
+  border-radius: 10px;
+  padding: 5px;
+  color: var(--blue-);
+  text-align: center;
+}
+
+.text_description_target p {
+  font-size: 15px;
+  color: var(--beige-);
+}
+
+.contain_characteristic_target {
+  width: 100%;
+  display: flex ;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contain_characteristic_target p {
+  width: 25%;
+  height: fit-content;
+  padding: 5px;
+  text-align: center;
+  color: var(--beige-);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.border_target_char {
+  border-right: solid 1px #fff8dc;
+}
+
 /* Finish samuel */
 
 /********* Start Responsive ************/
