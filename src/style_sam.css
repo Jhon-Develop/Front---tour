@@ -232,7 +232,7 @@ img {
   height: 150px;
   background-color: var(--blue-);
   color: white;
-  border: 1px solid #4f6772;
+  border: none;
   text-align: left;
 
 }
@@ -241,12 +241,13 @@ img {
   border-left: solid 2px white;
   font-weight: bold;
   cursor: pointer;
+  background-color:#4f6772 ;
 }
 
 .menu_dash_admin h3 {
   text-align: left;
   color: white;
-  padding: 10px;
+  padding: 10px 10px 10px 0px ;
 }
 /* ------ targets description dashboard admin -----*/
 .place_dashboard_contain {
@@ -353,7 +354,7 @@ img {
   text-align: center;
   color: var(--beige-);
   font-weight: bold;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .border_target_char {
