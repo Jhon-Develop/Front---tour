@@ -1,3 +1,4 @@
+import { PublicLayout } from "./components/Layout/public/public_layout";
 import { routes } from "./helpers/routes";
 
 const API_URL = 'http://localhost:4000/api/auth/verify-token';
@@ -27,12 +28,14 @@ async function verifyToken(token) {
   }
   
   // Navegar a una nueva ruta
-  export function navigateTo(path) {
+export function navigateTo(path) {
     window.history.pushState({}, '', window.location.origin + path);
     Router();
   }
 
-  export async function Router() {
+
+  
+export async function Router() {
     const path = window.location.pathname;
     const params = new URLSearchParams(window.location.search);
   
@@ -53,7 +56,8 @@ async function verifyToken(token) {
     const privateRoute = routes.private?.find((r) => r.path === path);
   
     if (publicRoute) {
-      publicRoute.component(params);
+      const pageContent = publicRoute.component();
+      PublicLayout({pageContent, params})
     } else if (privateRoute) {
       checkAuth(path, params);
     } else {

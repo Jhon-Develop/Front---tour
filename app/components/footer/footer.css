@@ -1,0 +1,117 @@
+.footer_home {
+    background-color: #254453;
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    margin-top: 20px;
+  }
+  
+ .map_footer {
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+  }
+  
+  .contain_map_footer {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section_info_footer {
+    width: 60%;
+  }
+  .column_info_footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .info_contact,
+  .info_adress {
+    width: fit-content;
+    padding: 30px;
+    font-size: 20px;
+    font-family: var(--font-family-title);
+    list-style: none;
+    height: 100%;
+  }
+  
+  .contain_info_adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .info_contact ul,
+  .info_adress ul {
+    list-style: none;
+    color: var(--beige-);
+    font-weight: bold;
+  }
+  
+  .info_contact ul li,
+  .info_adress ul li {
+    padding: 5px;
+  }
+  
+  .info_contact ul li:hover,
+  .info_adress ul li:hover {
+    color: white;
+  }
+  
+  .social_media_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-family: var(--font-family-title);
+    color: var(--beige-);
+  }
+  
+  .social_media_footer svg {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+  }
+
+
+/*start responsive */
+/*---------mobile*/
+@media screen and (max-width: 599px) {
+    .footer_home {
+      height: 30vh;
+    }
+    .info_contact,
+    .info_adress {
+      font-size: 10px;
+    }
+    .social_media_footer svg {
+      height: 20px;
+      width: 20px;
+      margin: 5px;
+    }
+    .info_contact,
+    .info_adress {
+      padding: 10px;
+    }
+  }
+
+
+  /* ------------ tablet-----*/
+@media screen and (min-width: 600px) and (max-width: 920px) {
+    .social_media_footer svg {
+      margin: 3px;
+    }
+    .article_img {
+      flex: 0 0 calc(100% / 1);
+    }
+  }

@@ -1,0 +1,261 @@
+img{
+    max-width: 100%;
+}
+
+/* Start francisco */
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--blue-);
+}
+
+.navLogo {
+    min-width: 100px;
+    max-width: 101px;
+    height: 44px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navLogo img {
+    width: 100%;
+    height: auto;
+}
+
+.navMenu {
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: var(--blue-);
+    list-style-type: none;
+    gap: 10px;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.navMenu li a {
+    color: var(--white-);
+    padding: 5px;
+    display: flex;
+    font-size: medium;
+}
+
+.navMenu li a:hover {
+    border-radius: 5px;
+    background-color: var(--beige-);
+    color: var(--blue-);
+}
+
+.menuToggle {
+    order: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+[aria-expanded='true']+.navMenu {
+    display: flex
+}
+
+.menuToggle:hover {
+    border: 2px var(--beige-) solid;
+}
+
+.access {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: medium;
+}
+
+.subMenu {
+    display: none;
+    position: absolute;
+    left: -7px;
+    top: 100%;
+    background-color: var(--beige-);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    list-style-type: none;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: var(--font-family-title);
+    font-size: medium;
+}
+
+.subMenu li {
+    padding: 8px 12px;
+}
+
+.subMenu li a {
+    color: var(--blue-);
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.subMenu li a:hover {
+    background-color: var(--blue-);
+    color: var(--beige-);
+
+}
+
+.access:hover .subMenu {
+    display: block;
+}
+
+#submenu_btn {
+    background-color: var(--beige-);
+    color: var(--blue-);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+/*Modal Login*/
+.modalLogin,
+.modalRegistrarse {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modalContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--blue-);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 2%;
+    top: -1%
+}
+
+#close:hover,
+#close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.modalLogin_input {
+    padding: 14px 16px;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 1em;
+}
+
+.modalLogin_tittle,
+.modalRegister_tittle {
+    color: var(--white-);
+    font-weight: 400;
+    margin: 10px 0 20px;
+}
+
+.modalLogin_tittle a {
+    font-weight: 400;
+    color: var(--white-);
+}
+
+
+.modal_login_btn,
+.modal_register_btn {
+    color: #254453;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9em;
+    background-color: #FFF8DC;
+    margin: 20px 0 20px;
+}
+
+/*Modal Registro*/
+.modal_register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+}
+
+.select_profile{
+    padding-top: 20px;
+    font-weight: 400;
+    color: var(--white-);
+}
+
+.modal_register_form_div {
+    display: flex;
+    gap: 20px;
+}
+
+.modal_register_form_label {
+    color: var(--white-);
+}
+/* Finish francisco */
+
+/********* Start Responsive ************/
+/* Start francisco */
+@media screen and (min-width: 660px) {
+    .menuToggle {
+        display: none;
+    }
+
+    .navMenu {
+        display: flex;
+        position: static;
+        order: 1;
+        width: auto;
+    }
+
+    .access {
+        order: 2;
+    }
+
+}
+
+/* Finish francisco */
