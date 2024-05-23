@@ -204,46 +204,75 @@ img {
 
 .menu_dash_admin {
   background-color: var(--blue-);
-  width: 30%; 
+  width: 20%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 50px;
+}
 
+.menu_dash_admin div{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.menu_dash_admin div svg {
+  color: white;
+  height: 100px;
+  width:fit-content;
 }
 
 .menu_dash_admin button{
-  padding: 10px;
-  width: 80%;
+  padding: 5px;
+  width:120px;
+  height: 150px;
   background-color: var(--blue-);
   color: white;
   border: 1px solid #4f6772;
+  text-align: left;
+
 }
 
 .menu_dash_admin button:hover {
   border-left: solid 2px white;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.menu_dash_admin h2 {
-  text-align: center;
+.menu_dash_admin h3 {
+  text-align: left;
   color: white;
   padding: 10px;
 }
 /* ------ targets description dashboard admin -----*/
 .place_dashboard_contain {
   height: 100vh;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
   gap: 30px;
+  overflow: scroll;
+  overflow-x: hidden;
+  
+}
+
+.section_description_targets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .table_stadistics {
-  height: 50vh;
+  height: 500px;
   width: 80%;
   border: #254453 solid 1px;
   border-radius: 20px;
@@ -265,13 +294,15 @@ img {
   color: var(--blue-);
   background-color: var(--white-);
   border-color: var(--blue-) 1px solid;
+  cursor: pointer;
 }
 
 /* ------ targets description dashboard admin -----*/
+
 .target_description_dash {
   display: flex;
   height: 30vh;
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
   box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
 }
@@ -312,6 +343,7 @@ img {
   display: flex ;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-bottom: solid 1px #fff8dc;
 }
 
 .contain_characteristic_target p {
@@ -342,7 +374,7 @@ img {
 /* Finish juan_pablo */
 /* Start samuel */
 /* ------------------------- tablet-----*/
-@media screen and (min-width: 600px) and (max-width: 920px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   .section-dashHero {
     height: 80vh;
   }
@@ -351,6 +383,28 @@ img {
   }
   .article-img {
     flex: 0 0 calc(100% / 1);
+  }
+
+  .menu_dash_admin {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .menu_dash_admin h3 {
+    text-align: center;
+  }
+
+  .menu_dash_admin div  {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu_dash_admin button{
+    text-align: center;
+  }
+
+  .target_description_dash{
+    height: 300px;
   }
 }
 /* ------------------------- mobile -----*/
@@ -368,15 +422,105 @@ img {
   .info_adress {
     font-size: 10px;
   }
+
   .social_media_footer svg {
     height: 20px;
     width: 20px;
     margin: 5px;
   }
+
   .info_contact,
   .info_adress {
     padding: 10px;
   }
+
+  /* --------------------------section dashboard----------- */
+
+
+  .menu_dash_admin {
+    justify-content: flex-start;
+    align-items: ;
+
+    padding: 5px;
+  }
+
+  .menu_dash_admin button {
+    font-size: 9px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .menu_dash_admin h3 {
+    padding: 0px;
+    width: 100%;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .menu_dash_admin div {
+    width: 100%;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+
+  }
+
+  .menu_dash_admin div svg {
+    height: 50px;
+  }
+
+  .menu_dash_admin div{
+    margin-bottom: 10px;
+  }
+
+ 
+
+  .place_dashboard_contain{
+    padding: 10px;
+  }
+
+  .table_stadistics {
+    height: 30vh;
+  }
+
+  .contain_text_description {
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+    gap: 10px;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .img_target_description {
+    
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .target_description_dash {
+    flex-direction: column;
+    height: 300px;
+  }
+
+  .target_description_dash p {
+    font-size: 10px;
+  }
+
+  .contain_characteristic_target {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .border_target_char {
+    border: 0px;
+  }
 }
+
+/* Finish samuel */
 /* Finish samuel */
 /*********** Finish Responsive ***********/
