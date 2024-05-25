@@ -8,7 +8,6 @@
 /**Paremetros del metodo addEventListener
  * _ tipo de evento
  * _ funcion ah ejecutar
- * _ captura
  * Primero se esta verificando que el dom haya sido cargado para ejecutar
  * la funcion
  */
@@ -20,21 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
   cardMain.forEach((card) => {
     // asignando el evento de click
     card.addEventListener('click', () => {
-      //Vuelve y recorre el forEach de cards principales es decir en las que no se hicieron click
-      // y luego compara si la en las cards que no se hicieron click es diferente de la que hizo click
-      // y si es diferente las oculta
+      // Si se hace click en una tarjeta oculta las demas
       cardMain.forEach((e) => {
         if (e !== card) {
           e.querySelector('.more_information').style.display = 'none';
         }
       });
+      // Obtengo la tarjeta en la que se hizo click
       const details = card.querySelector('.more_information');
-      // Se esta verificando si el estilo de elemento actual es estrictamente igual ah bloque,
-      // si esta condicion se cumple oculta todas las cards
+      //Si la tarjeta ya esta mostrada la escondo
       if (details.style.display === 'block') {
         details.style.display = 'none';
       }
-      // Si los details estan actulmente ocultos (none) se cambia el estilo de visualizacion ah bloque
+      // Si la tarjeta esta oculta (none) la muestro
       else {
         details.style.display = 'block';
       }

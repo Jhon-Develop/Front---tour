@@ -176,6 +176,8 @@ html {
     border-radius: 16px;
     border: 2px solid rgb(36, 34, 34);
     padding: 1rem;
+    /*Asigno display:  none ya que por defecto cuando se muestran en bloque*/
+    display: none;
 }
 
 .more_information:hover {
