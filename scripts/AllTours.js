@@ -1,3 +1,4 @@
+// Supongamos que esta es la api que se va consumir
 const ApiTours = [
   {
     image: 'https://images.adsttc.com/media/images/5a4b/c9b5/b22e/38b5/fa00/00ac/newsletter/Screen_Shot_2018-01-02_at_12.05.08_PM.jpg?1514916273',
@@ -84,6 +85,7 @@ const ApiTours = [
 
 ];
 
+// Funcion para crear el tour
 function createCard(tour) {
   const fragment = document.createDocumentFragment();
   let card = document.createElement('article');
