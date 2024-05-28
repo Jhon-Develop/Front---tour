@@ -82,7 +82,7 @@ module.exports = {
         compress: true,
         port: 5500,
         historyApiFallback: {
-            index: '/index1.html'
+            index: '/index.html' 
         }
     }
 }

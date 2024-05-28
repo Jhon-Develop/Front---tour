@@ -1,0 +1,157 @@
+
+.section_dashboard_admin {
+    height: 100%;
+    width: 450%;
+    display: flex;
+  }
+  
+  .menu_dash_admin {
+    background-color: var(--blue-);
+    width: 20%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .menu_dash_admin div{
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  .menu_dash_admin div svg {
+    color: white;
+    height: 100px;
+    width:fit-content;
+  }
+  
+  .menu_dash_admin a{
+    padding: 20px;
+    width:130px;
+    height: fit-content;
+    background-color: var(--blue-);
+    color: white;
+    border: none;
+    text-align: left;
+  }
+  
+  .menu_dash_admin a:hover {
+    border-left: solid 2px white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:#4f6772 ;
+  }
+  
+  .menu_dash_admin h3 {
+    text-align: left;
+    color: white;
+    padding: 10px 10px 10px 0px ;
+  }
+  
+  .profile_menu_dash h3{
+    padding: 10px;
+    width: 100%;
+  }
+
+  .menu_dash_admin {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .menu_dash_admin a {
+    font-size: 9px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .menu_dash_admin h3 {
+    padding: 0px;
+    width: 100%;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .menu_dash_admin div {
+    width: 100%;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+
+  }
+
+  .menu_dash_admin div svg {
+    height: 50px;
+  }
+
+  .menu_dash_admin div{
+    margin-bottom: 10px;
+  }
+
+  /* ------------------------- tablet-----*/
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .section-dashHero {
+      height: 80vh;
+    }
+    .social_media_footer svg {
+      margin: 3px;
+    }
+    .article-img {
+      flex: 0 0 calc(100% / 1);
+    }
+  
+    .menu_dash_admin {
+      padding: 10px;
+      align-items: center;
+    }
+  
+    .menu_dash_admin h3 {
+      text-align: center;
+    }
+  
+    .menu_dash_admin div  {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .menu_dash_admin button{
+      text-align: center;
+    }
+  
+    .target_description_dash{
+      height: 300px;
+    }
+  }
+  /* ------------------------- mobile -----*/
+  @media screen and (max-width: 599px) {
+    .section-dashHero {
+      height: 70vh;
+    }
+    .menu_dashHero h2 {
+      font-size: 13px;
+    }
+    .footer-home {
+      height: 30vh;
+    }
+    .info_contact,
+    .info_adress {
+      font-size: 10px;
+    }
+  
+    .social_media_footer svg {
+      height: 20px;
+      width: 20px;
+      margin: 5px;
+    }
+  
+    .info_contact,
+    .info_adress {
+      padding: 10px;
+    }
+}

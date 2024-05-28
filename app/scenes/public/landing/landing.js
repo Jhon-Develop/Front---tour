@@ -9,7 +9,7 @@ export function landingPage() {
     const landingContent = `
         ${dashContent}
 
-        <section href="#principales" id=${mainDestinations}>
+        <section id="principales" class=${mainDestinations}>
         <h1>
             Principales Destinos
         </h1>
@@ -80,7 +80,7 @@ export function landingPage() {
         </div>
       </section>
 
-    <div href="#destacados" class=${P_sub_title}>
+    <div id="destacados" class=${P_sub_title}>
     <h1>Toures Destacados</h1>
     </div>
     <article  class=${article_cards}>
@@ -754,13 +754,14 @@ export function landingPage() {
         </div>
     </article>
 
+
     ${footerContent}
       
     `
     ;
 
-    const logic = () => { document.addEventListener('DOMContentLoaded', function () {
-        const cardMain = document.querySelectorAll('.cards_highlights');
+    const logic = () => { 
+        const cardMain = document.querySelectorAll(`.${cards_highlights}`);
         /**En el primer forEach se esta iterando sobre todas las cards cardMain
          * y se les esta asignando un escuchador de eventos
          */
@@ -772,10 +773,10 @@ export function landingPage() {
             // y si es diferente las oculta
             cardMain.forEach((e) => {
               if (e !== card) {
-                e.querySelector('.more_information').style.display = 'none';
+                e.querySelector(`.${more_information}`).style.display = 'none';
               }
             });
-            const details = card.querySelector('.more_information');
+            const details = card.querySelector(`.${more_information}`);
             // Se esta verificando si el estilo de elemento actual es estrictamente igual ah bloque,
             // si esta condicion se cumple oculta todas las cards
             if (details.style.display === 'block') {
@@ -787,8 +788,9 @@ export function landingPage() {
             }
           });
         });
-      })
-    };
+      }
+
+    
 
     return {html: landingContent, logic}
 }

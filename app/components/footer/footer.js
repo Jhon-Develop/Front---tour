@@ -1,7 +1,7 @@
 import {social_media_footer, info_contact, info_adress, map_footer, contain_map_footer, contain_info_adress, section_info_footer, column_info_footer, footer_home} from './footer.css';
 
 export const footerContent = `
-<div class=${footer_home}>
+<div id="contacto" class=${footer_home}>
   <div class=${contain_map_footer}>
     <div class=${map_footer} ></div>
   </div>

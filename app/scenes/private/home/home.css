@@ -1,0 +1,112 @@
+.place_dashboard_contain {
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}
+
+.section_description_targets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.table_stadistics {
+    height: 500px;
+    width: 80%;
+    border: #254453 solid 1px;
+    border-radius: 20px;
+}
+  
+.button_table_stadistics {
+    background-color: var(--blue-);
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: var(--white-);
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.button_table_stadistics:hover {
+    font-weight: bold;
+    color: var(--blue-);
+    background-color: var(--white-);
+    border-color: var(--blue-) 1px solid;
+    cursor: pointer;
+}
+
+
+.target_description_dash {
+    display: flex;
+    height: 30vh;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+}
+  
+.img_target_description {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+  
+.contain_text_description{
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-);
+    border-radius: 0px 10px 10px 00px;
+}
+  
+.title_tour_description {
+    width: 80%;
+    background-color: var(--beige-);
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--blue-);
+    text-align: center;
+}
+  
+.text_description_target p {
+    font-size: 15px;
+    color: var(--beige-);
+}
+  
+  .contain_characteristic_target {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: fit-content;
+  }
+  
+.contain_characteristic_target p {
+    width: 25%;
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+    color: var(--beige-);
+    font-weight: bold;
+    font-size: 10px;
+}
+  
+  .border_target_char {
+    border-right: solid 1px #fff8dc;
+}
+
+
+ 
