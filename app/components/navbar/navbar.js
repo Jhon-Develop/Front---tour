@@ -83,8 +83,8 @@ export function Navbar() {
                 <div class=${modalContent}>
                   <h3 class=${modalLogin_tittle}>Ingresa tus datos</h3>
                   <span class="close" id=${close} >&times;</span>
-                  <input type="email" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
-                  <input type="text" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
+                  <input type="email" id="loginEmail" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
+                  <input type="text" id="loginPassword" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
                   <button id="modal_login_btn" class=${modal_login_btn} type="submit">Ingresar</button>
                   <h4 class=${modalLogin_tittle}><a href="#">Recuperar contraseña</a></h4>
                 </div>
@@ -107,12 +107,20 @@ export function Navbar() {
           document.body.removeChild(modal);
         }
       };
-      const $testiar = document.getElementById("modal_login_btn");
+      // const $testiar = document.getElementById("modal_login_btn");
 
-      $testiar.onclick = function () {
-        alert("Acceso concedido");
-      };
-    };
+      // $testiar.onclick = function () {
+      //   alert("Acceso concedido");
+      // };
+      const login = document.getElementById("modal_login_btn");
+
+      login.addEventListener("click", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+        console.log(email, password);
+      });
+    }; //Fin Funcion MiCuenta
 
     //Modal registrarse
     const $registrarse = document.getElementById("registrarse");
@@ -139,7 +147,7 @@ export function Navbar() {
                       </label>
                     </div>
                   </form>
-                  <button id="login" class=${modal_register_btn} type="submit">Registrarme</button>
+                  <button id="register" class=${modal_register_btn} type="submit">Registrarme</button>
                 </div>
             `;
 
@@ -161,7 +169,7 @@ export function Navbar() {
         }
       };
     };
-  };
+  }; //Fin Logic
 
-  return { html: navContent, logic}
+  return { html: navContent, logic };
 }
