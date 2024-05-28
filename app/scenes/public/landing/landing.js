@@ -749,7 +749,7 @@ export function landingPage() {
                 </div>
             </div>
         </section>
-        <div class=${see_more}>
+        <div id="see_more" class=${see_more}>
             <button>Ver más</button>
         </div>
     </article>
@@ -788,9 +788,95 @@ export function landingPage() {
             }
           });
         });
-      }
 
+    // Funcion asincrona para obtener la informacion sobre los tours
+    async function getLetterInformation() {
+        try {
+        const resolve = await fetch('https://jsonplaceholder.typicode.com/users');
+        // Si el status de la respuesta es distinto de 200 y 299, muestro un error
+        console.log(resolve);
+        if (!resolve.ok) {
+            throw new Error(`Hubo un error: Status ${resolve.status}\nStatus Text ${resolve.statusText}`)
+        }
+        // Si el status de la respuesta esta entre 200 y 299 convierto la respuesta ah Json
+        return resolve.json()
+        }
+        catch (error) {
+        console.log(error)
+        }
+    }
     
+    const $seeMore = document.getElementById(`#${see_more}`);
+    console.log($seeMore);
+    getLetterInformation()
+    .then((promiseResolve) => {
+      if (promiseResolve) {
+        //Si la promesa se resolvio correctamente le paso como parametro ah showInformation la informacion de promiseResolve
+        $seeMore.addEventListener('click', () => showInformation(promiseResolve))   
+      }
+      // Si hubo un error al obtener los datos, muestro un mensage por consola 
+      else {
+        console.log("Hubo un error al obtener los datos")
+      }
+    })
+
+    function showInformation(card) {
+        // Añadiendo el contenedor principal ah una constante para luego hacerle push al HTMl    
+        const containMain = document.querySelector(`.${P_section_highlights}`)
+        console.log(containMain);
+        const fragment = document.createDocumentFragment();
+        // El parametro que va tomar createCard va ser el de "el" elemento que esta iterando sobre el array de card
+        card.forEach((el) => {
+          const carta = createCard(el);
+          fragment.appendChild(carta);
+        })
+
+        containMain.appendChild(fragment)
+    }
+
+
+        // Funcion para crear el tour
+    function createCard(tour) {
+        const fragment = document.createDocumentFragment();
+        let card = document.createElement('article');
+        card.classList.add('cards_highlights');
+        card.innerHTML = /*html*/`
+        <div class="highlights_images">
+            <img src="${img}" />
+        </div>
+        <div class=${about_travel}>
+            <h3 class=${travel_name}>${tour.name}</h3>
+            <button class=${button_price}>
+                <p>$${tour.price} USD</p>
+            </button>
+            <p></p>
+        </div>
+        <div class=${travel_opinions}>
+            <h2>${'<i class="fa-solid fa-star"></i>'.repeat(tour.raiting)}</h2>
+        </div>
+        <div class=${num_opinions}>
+            <p>${tour.numOpinions} plazas disponibles</p>
+        </div>
+        <!-- Más información -->
+        <div class=${more_information}>
+            <div class=${more_information_text}>
+                <h2>${'<i class="fa-solid fa-star"></i>'.repeat(tour.raiting)}</h2>
+                <p>${tour.description}</p>
+                <button class=${travel_price_back}>
+                    <p>$${tour.price} USD</p>
+                </button>
+            </div>
+            <div class=${contain_add_booking}>
+                <h3>${tour.name}</h3>
+                <button>RESERVAR</button>
+            </div>
+        </div>
+        `;
+        fragment.appendChild(card);
+        return fragment;
+    }
+    }
+
 
     return {html: landingContent, logic}
 }
