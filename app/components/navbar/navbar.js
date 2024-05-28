@@ -123,7 +123,7 @@ export function Navbar() {
       modal.innerHTML = `
                 <div class=${modalContent}>
                   <h3 class=${modalRegister_tittle}>Registra tus datos</h3>
-                  <span class="close">&times;</span>
+                  <span class="close" id=${close}>&times;</span>
                   <form method="POST"class=${modal_register_form}>
                     <input type="email" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
                     <input type="text" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
@@ -131,11 +131,11 @@ export function Navbar() {
                     <div class=${modal_register_form_div}>
                       <label class=${modal_register_form_label}>
                         Turista
-                        <input type="radio" id="tourist" name="profile" value="tourist" class=${modalRegistrarse}></input>
+                        <input type="radio" id="tourist" name="profile" value="tourist"></input>
                       </label>
                       <label class=${modal_register_form_label}>
                         Guía
-                        <input type="radio" id="guide" name="profile" value="guide" class=${modalRegistrarse}>
+                        <input type="radio" id="guide" name="profile" value="guide">
                       </label>
                     </div>
                   </form>

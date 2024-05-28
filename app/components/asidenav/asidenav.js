@@ -1,4 +1,4 @@
-import {button_ascend_admin,button_remove_admin, button_edit_admin, button_create_tour, button_my_tours, section_dashboard_admin, button_see_tours, menu_dash_admin, profile_menu_dash} from './asidenav.css'
+import { section_dashboard_admin, button_see_tours, menu_dash_admin, profile_menu_dash} from './asidenav.css'
 export function asidenav(){
     const $content = `
     <section class=${section_dashboard_admin}>
@@ -18,7 +18,8 @@ export function asidenav(){
             <a class="button_edit_admin">Edit / Remove</a>
             <a class="button_ascend_admin">User Ascend</a>
             <a href="/home" class="button_remove_admin">Home</a>
-        </div>ñ
+            <a class="button_see_tours">See Tours</a>
+        </div>
     </section>
     `
     const logic = () =>{

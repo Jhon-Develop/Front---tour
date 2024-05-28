@@ -1,6 +1,6 @@
 .place_dashboard_contain {
     height: 100vh;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
