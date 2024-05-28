@@ -1,12 +1,40 @@
-import {card1, card2, travel_opinions, contain_add_booking, travel_price_back, more_information, more_information_text, num_opinions, see_more, about_travel, P_sub_title, travel_name, article_cards, button_price, P_section_highlights, cards_highlights, arrow, c_1, c_2, c_3, c_4, c_5, c_6, c_7, inputUser, mainDestinations, places, searchBar, searchWhitInputUser} from './landing.css'
-import {footerContent} from '../../../components/footer/footer';
+import {
+  card1,
+  card2,
+  travel_opinions,
+  contain_add_booking,
+  travel_price_back,
+  more_information,
+  more_information_text,
+  num_opinions,
+  see_more,
+  about_travel,
+  P_sub_title,
+  travel_name,
+  article_cards,
+  button_price,
+  P_section_highlights,
+  cards_highlights,
+  arrow,
+  c_1,
+  c_2,
+  c_3,
+  c_4,
+  c_5,
+  c_6,
+  c_7,
+  inputUser,
+  mainDestinations,
+  places,
+  searchBar,
+  searchWhitInputUser,
+} from "./landing.css";
+import { footerContent } from "../../../components/footer/footer";
 import img from "/app/assets/img/torre.png";
-import {dashContent} from './dashBoard/dash';
-
-
+import { dashContent } from "./dashBoard/dash";
 
 export function landingPage() {
-    const landingContent = `
+  const landingContent = `
         ${dashContent}
 
         <section id="principales" class=${mainDestinations}>
@@ -757,90 +785,91 @@ export function landingPage() {
 
     ${footerContent}
       
-    `
-    ;
-
-    const logic = () => { 
-        const cardMain = document.querySelectorAll(`.${cards_highlights}`);
-        /**En el primer forEach se esta iterando sobre todas las cards cardMain
-         * y se les esta asignando un escuchador de eventos
-         */
-        cardMain.forEach((card) => {
-          // asignando el evento de click
-          card.addEventListener('click', () => {
-            //Vuelve y recorre el forEach de cards principales es decir en las que no se hicieron click
-            // y luego compara si la en las cards que no se hicieron click es diferente de la que hizo click
-            // y si es diferente las oculta
-            cardMain.forEach((e) => {
-              if (e !== card) {
-                e.querySelector(`.${more_information}`).style.display = 'none';
-              }
-            });
-            const details = card.querySelector(`.${more_information}`);
-            // Se esta verificando si el estilo de elemento actual es estrictamente igual ah bloque,
-            // si esta condicion se cumple oculta todas las cards
-            if (details.style.display === 'block') {
-              details.style.display = 'none';
-            }
-            // Si los details estan actulmente ocultos (none) se cambia el estilo de visualizacion ah bloque
-            else {
-              details.style.display = 'block';
-            }
-          });
+    `;
+  const logic = () => {
+    const cardMain = document.querySelectorAll(`.${cards_highlights}`);
+    /**En el primer forEach se esta iterando sobre todas las cards cardMain
+     * y se les esta asignando un escuchador de eventos
+     */
+    cardMain.forEach((card) => {
+      // asignando el evento de click
+      card.addEventListener("click", () => {
+        //Vuelve y recorre el forEach de cards principales es decir en las que no se hicieron click
+        // y luego compara si la en las cards que no se hicieron click es diferente de la que hizo click
+        // y si es diferente las oculta
+        cardMain.forEach((e) => {
+          if (e !== card) {
+            e.querySelector(`.${more_information}`).style.display = "none";
+          }
         });
+        const details = card.querySelector(`.${more_information}`);
+        // Se esta verificando si el estilo de elemento actual es estrictamente igual ah bloque,
+        // si esta condicion se cumple oculta todas las cards
+        if (details.style.display === "block") {
+          details.style.display = "none";
+        }
+        // Si los details estan actulmente ocultos (none) se cambia el estilo de visualizacion ah bloque
+        else {
+          details.style.display = "block";
+        }
+      });
+    });
 
     // Funcion asincrona para obtener la informacion sobre los tours
     async function getLetterInformation() {
-        try {
-        const resolve = await fetch('https://jsonplaceholder.typicode.com/users');
+      try {
+        const resolve = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
         // Si el status de la respuesta es distinto de 200 y 299, muestro un error
         console.log(resolve);
         if (!resolve.ok) {
-            throw new Error(`Hubo un error: Status ${resolve.status}\nStatus Text ${resolve.statusText}`)
+          throw new Error(
+            `Hubo un error: Status ${resolve.status}\nStatus Text ${resolve.statusText}`
+          );
         }
         // Si el status de la respuesta esta entre 200 y 299 convierto la respuesta ah Json
-        return resolve.json()
-        }
-        catch (error) {
-        console.log(error)
-        }
+        return resolve.json();
+      } catch (error) {
+        console.log(error);
+      }
     }
-    
-    const $seeMore = document.getElementById(`#${see_more}`);
+
+    const $seeMore = document.querySelector(`.${see_more}`);
     console.log($seeMore);
-    getLetterInformation()
-    .then((promiseResolve) => {
+    getLetterInformation().then((promiseResolve) => {
       if (promiseResolve) {
         //Si la promesa se resolvio correctamente le paso como parametro ah showInformation la informacion de promiseResolve
-        $seeMore.addEventListener('click', () => showInformation(promiseResolve))   
+        $seeMore.addEventListener("click", () =>
+          showInformation(promiseResolve)
+        );
       }
-      // Si hubo un error al obtener los datos, muestro un mensage por consola 
+      // Si hubo un error al obtener los datos, muestro un mensage por consola
       else {
-        console.log("Hubo un error al obtener los datos")
+        console.log("Hubo un error al obtener los datos");
       }
-    })
+    });
 
     function showInformation(card) {
-        // Añadiendo el contenedor principal ah una constante para luego hacerle push al HTMl    
-        const containMain = document.querySelector(`.${P_section_highlights}`)
-        console.log(containMain);
-        const fragment = document.createDocumentFragment();
-        // El parametro que va tomar createCard va ser el de "el" elemento que esta iterando sobre el array de card
-        card.forEach((el) => {
-          const carta = createCard(el);
-          fragment.appendChild(carta);
-        })
+      // Añadiendo el contenedor principal ah una constante para luego hacerle push al HTMl
+      const containMain = document.querySelector(`.${P_section_highlights}`);
+      console.log(containMain);
+      const fragment = document.createDocumentFragment();
+      // El parametro que va tomar createCard va ser el de "el" elemento que esta iterando sobre el array de card
+      card.forEach((el) => {
+        const carta = createCard(el);
+        fragment.appendChild(carta);
+      });
 
-        containMain.appendChild(fragment)
+      containMain.appendChild(fragment);
     }
 
-
-        // Funcion para crear el tour
+    // Funcion para crear el tour
     function createCard(tour) {
-        const fragment = document.createDocumentFragment();
-        let card = document.createElement('article');
-        card.classList.add('cards_highlights');
-        card.innerHTML = /*html*/`
+      const fragment = document.createDocumentFragment();
+      let card = document.createElement("article");
+      card.classList.add("cards_highlights");
+      card.innerHTML = /*html*/ `
         <div class="highlights_images">
             <img src="${img}" />
         </div>
@@ -860,7 +889,9 @@ export function landingPage() {
         <!-- Más información -->
         <div class=${more_information}>
             <div class=${more_information_text}>
-                <h2>${'<i class="fa-solid fa-star"></i>'.repeat(tour.raiting)}</h2>
+                <h2>${'<i class="fa-solid fa-star"></i>'.repeat(
+                  tour.raiting
+                )}</h2>
                 <p>${tour.description}</p>
                 <button class=${travel_price_back}>
                     <p>$${tour.price} USD</p>
@@ -872,12 +903,10 @@ export function landingPage() {
             </div>
         </div>
         `;
-        fragment.appendChild(card);
-        return fragment;
+      fragment.appendChild(card);
+      return fragment;
     }
-    }
+  };
 
-
-    return {html: landingContent, logic}
+  return { html: landingContent, logic };
 }
-

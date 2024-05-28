@@ -1,4 +1,6 @@
 import logo from "/app/assets/img/logo.png";
+import { formValidator } from "../../../../../helpers";
+
 import {
   modalLogin,
   menuToggle,
@@ -112,13 +114,36 @@ export function Navbar() {
       // $testiar.onclick = function () {
       //   alert("Acceso concedido");
       // };
-      const login = document.getElementById("modal_login_btn");
+      const access = document.getElementById("modal_login_btn");
 
-      login.addEventListener("click", (e) => {
+      access.addEventListener("click", (e) => {
         e.preventDefault();
         const email = document.getElementById("loginEmail").value;
         const password = document.getElementById("loginPassword").value;
+
         console.log(email, password);
+
+        async function getLetterInformation() {
+          try {
+            const response = await fetch(
+              "https://jsonplaceholder.typicode.com/users"
+            );
+            // Si el status de la respuesta es distinto de 200 y 299, muestro un error
+            if (!response.ok) {
+              throw new Error(
+                `Hubo un error: Status ${response.status}\nStatus Text ${response.statusText}`
+              );
+            }
+            // Si el status de la respuesta esta entre 200 y 299 convierto la respuesta ah Json
+            const data = await response.json();
+            console.log({ data });
+
+            return data;
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        getLetterInformation();
       });
     }; //Fin Funcion MiCuenta
 
