@@ -835,7 +835,7 @@ export function landingPage() {
       }
     }
 
-    const $seeMore = document.querySelector(`.${see_more}`);
+    const $seeMore = document.getElementById(`#${see_more}`);
     console.log($seeMore);
     getLetterInformation().then((promiseResolve) => {
       if (promiseResolve) {
@@ -876,7 +876,7 @@ export function landingPage() {
         <div class=${about_travel}>
             <h3 class=${travel_name}>${tour.name}</h3>
             <button class=${button_price}>
-                <p>$${tour.price} USD</p>
+                <p>$${tour.id} USD</p>
             </button>
             <p></p>
         </div>
