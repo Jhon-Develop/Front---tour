@@ -177,6 +177,9 @@
     box-shadow: 3px 4px 12px 4px rgba(163, 155, 194, 1);
     margin: 0 auto;
 }
+.cards_highlights *{
+    pointer-events: none;
+}
 
 .cards_highlights img {
     width: 100%;
