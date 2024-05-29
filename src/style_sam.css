@@ -102,16 +102,26 @@ img {
   font-family: var(--font-family-title);
 }
 
-.table_one_hero,
-.table_two_hero {
-  width: 80%;
-  height: 50%;
+.table_one_hero {
+  width: fit-content;
+  height: fit-content;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: #254453 1px solid;
 }
+
+.table_one_hero div {
+  width: fit-content;
+  height: fit-content;
+}
+
 /* ------------------------- footer -----*/
 
 .footer_home {
-  background-color: var(--blue-)  ;
+  background-color: var(--blue-);
   width: 100%;
   height: 45vh;
   display: flex;
@@ -134,6 +144,7 @@ img {
 .section_info_footer {
   width: 60%;
 }
+
 .column_info_footer {
   display: flex;
   justify-content: space-evenly;
@@ -194,6 +205,7 @@ img {
   width: 50px;
   margin: 10px;
 }
+
 /* ------------------------- dashboard admin -----*/
 
 .section_dashboard_admin {
@@ -213,22 +225,22 @@ img {
   padding: 50px;
 }
 
-.menu_dash_admin div{
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.menu_dash_admin div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .menu_dash_admin div svg {
   color: white;
   height: 100px;
-  width:fit-content;
+  width: fit-content;
 }
 
-.menu_dash_admin button{
+.menu_dash_admin button {
   padding: 20px;
-  width:130px;
+  width: 130px;
   height: fit-content;
   background-color: var(--blue-);
   color: white;
@@ -240,19 +252,20 @@ img {
   border-left: solid 2px white;
   font-weight: bold;
   cursor: pointer;
-  background-color:#4f6772 ;
+  background-color: #4f6772;
 }
 
 .menu_dash_admin h3 {
   text-align: left;
   color: white;
-  padding: 10px 10px 10px 0px ;
+  padding: 10px 10px 10px 0px;
 }
 
-.profile_menu_dash h3{
+.profile_menu_dash h3 {
   padding: 10px;
   width: 100%;
 }
+
 /* ------ targets description dashboard admin -----*/
 .place_dashboard_contain {
   height: 100vh;
@@ -265,7 +278,7 @@ img {
   gap: 30px;
   overflow: scroll;
   overflow-x: hidden;
-  
+
 }
 
 .section_description_targets {
@@ -291,7 +304,7 @@ img {
   color: var(--white-);
   font-weight: 600;
   font-size: 15px;
-  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .button_table_stadistics:hover {
@@ -309,7 +322,7 @@ img {
   height: 30vh;
   width: 80%;
   border-radius: 10px;
-  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .img_target_description {
@@ -318,7 +331,7 @@ img {
   border-radius: 10px 0px 0px 10px;
 }
 
-.contain_text_description{
+.contain_text_description {
   width: 70%;
   padding: 20px;
   display: flex;
@@ -345,7 +358,7 @@ img {
 
 .contain_characteristic_target {
   width: 100%;
-  display: flex ;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: solid 1px #fff8dc;
@@ -364,6 +377,7 @@ img {
 .border_target_char {
   border-right: solid 1px #fff8dc;
 }
+
 /*--------------------- SECCION FORO ------------------- */
 .section_foro {
   height: 100vh;
@@ -379,13 +393,14 @@ img {
   padding: 20px 0px;
   color: var(--blue-);
 }
+
 /*--------comentarios realizados ---- */
 .contain_comment {
   background-color: var(--white-);
   width: 80%;
   min-height: fit-content;
   padding: 20px 40px;
-  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
   border-radius: 0px;
   display: flex;
   flex-direction: column;
@@ -415,7 +430,7 @@ img {
 }
 
 /*--------textarea de comentarios---- */
-.input_contain_commet{
+.input_contain_commet {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -428,11 +443,11 @@ img {
   color: var(--blue-);
 }
 
-.input_contain_commet textarea{
+.input_contain_commet textarea {
   height: 80px;
   padding: 10px;
   color: var(--blue-);
-  
+
 }
 
 .input_contain_commet button {
@@ -443,7 +458,7 @@ img {
   color: var(--white-);
   font-weight: 600;
   font-size: 15px;
-  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.5);
   margin: 20px 0px;
 }
 
@@ -455,9 +470,12 @@ img {
   cursor: pointer;
 }
 
-.link_a_comment{
+.link_a_comment {
   text-decoration: none !important;
 }
+
+
+
 /* Finish samuel */
 /********* Start Responsive ************/
 /* Start francisco */
@@ -475,9 +493,11 @@ img {
   .section-dashHero {
     height: 80vh;
   }
+
   .social_media_footer svg {
     margin: 3px;
   }
+
   .article-img {
     flex: 0 0 calc(100% / 1);
   }
@@ -491,30 +511,34 @@ img {
     text-align: center;
   }
 
-  .menu_dash_admin div  {
+  .menu_dash_admin div {
     flex-direction: column;
     width: 100%;
   }
 
-  .menu_dash_admin button{
+  .menu_dash_admin button {
     text-align: center;
   }
 
-  .target_description_dash{
+  .target_description_dash {
     height: 300px;
   }
 }
+
 /* ------------------------- mobile -----*/
 @media screen and (max-width: 599px) {
   .section-dashHero {
     height: 70vh;
   }
+
   .menu_dashHero h2 {
     font-size: 13px;
   }
+
   .footer-home {
     height: 30vh;
   }
+
   .info_contact,
   .info_adress {
     font-size: 10px;
@@ -530,6 +554,7 @@ img {
   .info_adress {
     padding: 10px;
   }
+
   /* --------------------------section dashboard----------- */
   .menu_dash_admin {
     justify-content: flex-start;
@@ -556,7 +581,7 @@ img {
   .menu_dash_admin div {
     width: 100%;
     flex-direction: column;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
 
   }
@@ -565,13 +590,13 @@ img {
     height: 50px;
   }
 
-  .menu_dash_admin div{
+  .menu_dash_admin div {
     margin-bottom: 10px;
   }
 
- 
 
-  .place_dashboard_contain{
+
+  .place_dashboard_contain {
     padding: 10px;
   }
 
@@ -588,7 +613,7 @@ img {
   }
 
   .img_target_description {
-    
+
     width: 100%;
     border-radius: 10px 10px 0px 0px;
   }
