@@ -12,13 +12,12 @@ export function asidenav(){
             </div>
             <h3>Menu Tours</h3>
             <h3>User</h3>
+            <a href="/home" class="button_home">Home</a>
+            <a href="/edit" class="button_edit_admin">See my tours/ Edit my tours</a>
             <a class="button_see_tours">See Tours</a>
-            <a class="button_my_tours">My Tours</a>
             <a href="/create" class="button_create_tour">Create</a>
-            <a class="button_edit_admin">Edit / Remove</a>
             <a class="button_ascend_admin">User Ascend</a>
-            <a href="/home" class="button_remove_admin">Home</a>
-            <a class="button_see_tours">See Tours</a>
+            <a class="button_see_tours">Log out</a>
         </div>
     </section>
     `

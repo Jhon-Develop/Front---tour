@@ -1,12 +1,12 @@
 /* Start alejandro */
 /*Diseño del titulo y la barra de busqueda */
 
-.mainDestinations{
+.mainDestinations {
     min-height: 100vh;
     margin-top: 40px;
 }
 
-.mainDestinations h1{
+.mainDestinations h1 {
     text-align: center;
     font-size: 2.5rem;
     color: #254453;
@@ -14,34 +14,34 @@
 }
 
 /*input de busqueda */
-.mainDestinations #searchBar{
+.mainDestinations #searchBar {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    padding: 20px;
 }
 
-#searchBar #inputUser{
+#searchBar #inputUser {
     background-color: #FFF8DC;
     width: 40%;
     border-radius: 5px;
     text-align: center;
     margin-right: 1%;
-    margin-bottom: 2rem;
     padding: 0.9%;
     border: solid 0px;
     box-shadow: 2px 2px 2px 0px;
     outline: none;
 }
 
- ::placeholder{
+::placeholder {
     font-size: 1rem;
     font-style: italic;
     color: #183543;
-} 
+}
 
 
 
 /* boton de buscar*/
-#searchWhitInputUser{
+#searchWhitInputUser {
     background-color: #254453;
     color: #FFF8DC;
     border-radius: 5px;
@@ -49,11 +49,11 @@
     text-align: start;
     font-family: "Roboto", sans-serif;
     box-shadow: 0px 2px 2px 0px;
-    margin-bottom: 2rem;
+    cursor: pointer;
     padding: 1rem;
 }
 
-#searchBar #arrow{
+#searchBar #arrow {
     position: relative;
     right: 3%;
     bottom: -0.6rem;
@@ -64,16 +64,16 @@
 /*Diseño y estructuracion del collage de destinos en "Principales destinos" */
 /*Maquetacion con grid */
 
-#places{
+#places {
     display: grid;
     justify-content: center;
     grid-template-columns: 32% 32% 16% 16%;
     grid-auto-rows: 70px;
     gap: 1rem;
-    padding: 20;
+    padding: 20px;
 }
 
-#places a{
+#places a {
     background: linear-gradient(to right, #25445390, #25445390);
     background-size: cover;
     background-position: center;
@@ -84,68 +84,69 @@
     border-radius: 10px;
 }
 
-#places h2{
+#places h2 {
     color: #FFF8DC;
     font-size: 200%;
     margin-left: 3%;
-    
+
 }
 
-#places a:hover{
+#places a:hover {
     color: #FFF8DC;
     box-shadow: 0px 0px 5px 3px #254453;
 }
 
-#places #c_1{
+#places #c_1 {
     grid-row: 1/7;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/medellin.jpeg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/medellin.jpeg);
     background-size: cover;
 }
 
-#places #c_2{
+#places #c_2 {
     grid-row: 1/4;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/Bogota.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/Bogota.jpg);
     background-size: cover;
 }
 
-#places #c_3{
+#places #c_3 {
     grid-row: 1/4;
     grid-column: 3/5;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/Barranquilla.webp);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/Barranquilla.webp);
     background-size: cover;
 }
 
-#places #c_4{
+#places #c_4 {
     grid-row: 4/7;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/cartagena.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/cartagena.jpg);
     background-size: cover;
 }
 
-#places #c_5{
+#places #c_5 {
     grid-column: 3/4;
-    grid-row: 4/7 ;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/cali.jpg);
+    grid-row: 4/7;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/cali.jpg);
     background-size: cover;
 }
 
-#places #c_6{
+#places #c_6 {
     grid-column: 4/5;
     grid-row: 4/7;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/santa_marta.png);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/santa_marta.png);
     background-size: cover;
 }
 
-#places #c_7{
+#places #c_7 {
     grid-row: 7/10;
     grid-column: 1/5;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/app/assets/img/bacaramanga.jpg);
-    background-size:cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/app/assets/img/bacaramanga.jpg);
+    background-size: cover;
 }
 
-#c_7 h2{
+#c_7 h2 {
     margin-left: 1%;
     margin-bottom: 0;
 }
+
 /* Finish alejandro */
 /* Start juan_pablo*/
 .P_sub_title {
@@ -166,6 +167,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    width: 100%;
 }
 
 .P_section_highlights {
@@ -185,7 +187,7 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-    padding: 10px;
+
     width: 100%;
     max-width: 400px;
     box-shadow: 3px 4px 12px 4px rgba(163, 155, 194, 1);
@@ -194,7 +196,7 @@
 
 .cards_highlights img {
     width: 100%;
-    border-radius: 16px;
+    border-radius: 16px 16px 5px 5px;
 }
 
 .about_travel {
@@ -211,9 +213,11 @@
     text-align: left;
     width: 100%;
     color: #254453;
-    font-size: 1rem;
+    font-size: 0.5rem;
     height: fit-content;
-    padding: 5px;
+    padding: 1rem;
+    border: #254453 1px solid;
+    border-radius: 10px;
 }
 
 .button_price {
@@ -222,7 +226,6 @@
     align-items: center;
     border-radius: 200%;
     background-color: #254453;
-    color: #000088;
     font-weight: bold;
     width: 130px;
     height: 80px;
@@ -243,6 +246,7 @@
 
 .travel_opinions h2 {
     font-size: 1.5rem;
+    padding-left: 1rem;
 }
 
 .num_opinions {
@@ -257,27 +261,35 @@
 .num_opinions p {
     font-size: 1rem;
     color: #254453;
+    padding: 1rem;
 }
 
 .see_more {
     text-align: center;
-    width: 30%;
+    width: 100%;
 }
 
 .see_more button {
+    width: 200px;
+    height: 70px;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: #254453;
     font-size: 1.5rem;
     color: #fff8dc;
     background-color: #254453;
     border-radius: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .see_more button:hover {
     background-color: #043459;
 }
+
+
+
 /* STYLES CART MORE INFORMATION*/
 .more_information {
     position: absolute;
@@ -294,7 +306,7 @@
     display: none;
 }
 
-.cards_highlights *{
+.cards_highlights * {
     pointer-events: none;
 }
 
@@ -314,7 +326,7 @@
     color: #fff8dc;
     font-size: 1rem;
     border: 2px solid white;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .contain_add_booking {
@@ -347,10 +359,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 1rem;
     text-align: center;
-    border: none;
+    border: solid 1px #FFF8DC;
     outline: none;
     font-size: 16px;
     cursor: pointer;
@@ -358,6 +370,11 @@
     font-weight: bold;
     height: 100%;
     background-color: #254453;
+}
+
+.contain_add_booking button:hover {
+    background-color: #fff8dc;
+    color: #254453;
 }
 
 .travel_price_back {
@@ -368,9 +385,9 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    height: 25%;
+    height: 22%;
     width: 30%;
-    border-radius: 50%;
+    border-radius: 200px;
     background-color: #fff8dc;
 }
 
@@ -423,15 +440,15 @@
         padding: 1rem;
     }
 
-    
+
 }
 
 @media screen and (min-width: 1182px) and (max-width: 1549px) {
-    #card1{
+    #card1 {
         display: none;
     }
 
-    #card2{
+    #card2 {
         display: none;
     }
 }
@@ -486,29 +503,40 @@
         width: 35%;
     }
 
-    #card1{
+    #card1 {
         display: none;
     }
 
-    #card2{
+    #card2 {
         display: none;
     }
 }
+
 /* Finish juan_pablo */
- 
+
 /*Start Alejandro */
-@media screen and (max-width: 1180px){
-    #arrow{
+@media screen and (max-width: 1180px) {
+    #arrow {
         display: none;
     }
 
-    #searchWhitInputUser{
+    #searchWhitInputUser {
         text-align: center;
     }
+
+    .mainDestinations {
+
+        padding: 20px;
+    }
 }
 
-@media screen and (max-width: 990px){
-    #places{
+@media screen and (max-width: 990px) {
+    .P_section_highlights {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #places {
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr 1fr;
@@ -516,55 +544,60 @@
         gap: 1rem;
     }
 
-    #places h2{
+    #places h2 {
         color: #FFF8DC;
         font-size: 170%;
         margin-left: 3%;
-        
+
     }
 
-    #places #c_1{
+    #places #c_1 {
         grid-column: 1fr;
         grid-row: 1/4;
     }
-    
-    #places #c_2{
+
+    #places #c_2 {
         grid-column: 1fr;
         grid-row: 1/4;
     }
-    
-    #places #c_3{
+
+    #places #c_3 {
         grid-column: auto;
         grid-row: 4/7;
     }
-    
-    #places #c_4{
+
+    #places #c_4 {
         grid-column: auto;
         grid-row: 4/7;
     }
-    
-    #places #c_5{
+
+    #places #c_5 {
         grid-column: auto;
         grid-row: 7/10;
     }
 
-    #places #c_6{
+    #places #c_6 {
         grid-column: auto;
         grid-row: 7/10;
     }
-    
-    #places #c_7{
+
+    #places #c_7 {
         display: none;
     }
-    
-    .mainDestinations #searchBar{
-        display: flex;
-        align-items: center; 
-        flex-direction: column;
-       
+
+    .mainDestinations {
+        width: 100%;
+        padding: 20px;
     }
 
-    #searchBar #inputUser{
+    .mainDestinations #searchBar {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #searchBar #inputUser {
         background-color: #FFF8DC;
         width: 40%;
         border-radius: 5px;
@@ -576,14 +609,14 @@
         outline: none;
         margin-bottom: 1%;
     }
-    
-     ::placeholder{
+
+    ::placeholder {
         font-size: 0.8rem;
         font-style: italic;
         color: #183543;
-    } 
+    }
 
-    #searchWhitInputUser{
+    #searchWhitInputUser {
         background-color: #254453;
         color: #FFF8DC;
         border-radius: 5px;
@@ -591,8 +624,6 @@
         text-align: center;
         font-family: "Roboto", sans-serif;
         box-shadow: 0px 2px 2px 0px;
-        padding: 0.5rem;
+        padding: 0.5rem;
     }
 }
-    
-    

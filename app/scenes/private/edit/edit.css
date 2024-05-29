@@ -1,0 +1,207 @@
+.target_description_dash {
+    display: flex;
+    height: 30vh;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+    
+}
+  
+.img_target_description {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+  
+.contain_text_description{
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-);
+    border-radius: 0px 10px 10px 00px;
+}
+  
+.title_tour_description {
+    width: 80%;
+    background-color: var(--beige-);
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--blue-);
+    text-align: center;
+}
+  
+.text_description_target p {
+    font-size: 15px;
+    color: var(--beige-);
+}
+  
+.contain_characteristic_target {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: fit-content;
+}
+  
+.contain_characteristic_target p {
+    width: 25%;
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+    color: var(--beige-);
+    font-weight: bold;
+    font-size: 10px;
+}
+  
+.border_target_char {
+    border-right: solid 1px #fff8dc;
+}
+
+.target_description_dash{
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.container{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column
+    
+}
+
+.editButton{
+   justify-content: center;
+   border-radius: 10px;
+   width: 15%;
+   background-color: var(--beige-);
+}
+
+
+.containerFormTour{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.formTour{
+    text-decoration: #254453;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    gap: 15px;
+    width: 800px;
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.formTour label{
+    padding: 3px 0 5px;
+}
+
+.formTour div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.formTourDescriptionTexArea{
+    border-radius: 5px;
+}
+
+.formTour div input{
+    padding: 5px 5px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus {
+    background-color: var(--beige-);
+}
+
+.formTour .formTourButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.formTour .formTourCategory input, .formTour .formTourLength input, .formTourPrice input  {
+    max-width: 150px;
+}
+
+.formTour .formTourNumberPeople .numberPeople{
+    max-width: 100px;
+}
+
+.formTour .formTourSchedule{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.formTour div .formTourSchedule input {
+    max-width: 200px;
+}
+
+.containerFormTour .formTour .formTourDivSchedule .addedSchedule{
+    max-width: 200px;
+
+
+}
+
+
+.formTour div .formTourSchedule button {
+    width: 20px;
+    height: 20px;
+    color: var(--beige-);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: var(--blue-);
+    border: #254453 1px solid;
+}
+
+.formTourDescriptionTexArea{
+    width: auto;
+    height: 100px;
+}
+
+.formTour .formTourButtons{
+    display: flex;
+    flex-direction: row;
+}
+
+.formTourButtons {
+    display: flex;
+    justify-content: space-around;
+}
+.formTourButtons button {
+    color: var(--beige-);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9em;
+    background-color: var(--blue-);
+    margin: 20px 0 20px;
+    border: #254453 1px solid;
+}
+
+.formTourButtons button:hover, .formTour div .formTourSchedule button:hover{
+    background-color: var(--beige-);
+    color: var(--blue-);
+}
+
+ 

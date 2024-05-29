@@ -2,7 +2,6 @@ import logo from "/app/assets/img/logo.png";
 import { navigateTo } from "/app/Router.js";
 import { formValidator } from "/app/helpers/form-validator.js";
 
-
 import {
   modalLogin,
   menuToggle,
@@ -61,11 +60,11 @@ export function Navbar() {
   //logic
 
   const logic = () => {
-    const $menuButton = document.querySelector(".menuToggle");
+    const $menuButton = document.querySelector(`.${menuToggle}`);
     const $menu = document.getElementById("navMenu");
     const ARIA_EXPANDED = "aria-expanded";
-    $menu.addEventListener("click", () => {
-      const isMenuOpened = $menu.getAttribute(ARIA_EXPANDED) === "true"; // -> 'true' 'false'
+    $menuButton.addEventListener("click", () => {
+      const isMenuOpened = $menu.getAttribute(ARIA_EXPANDED) === "true";
       isMenuOpened ? closeMenu($menu) : openMenu($menu);
     });
 
@@ -84,15 +83,15 @@ export function Navbar() {
       const modal = document.createElement("div");
       modal.classList.add(modalLogin);
       modal.innerHTML = `
-                <div class=${modalContent}>
-                  <h3 class=${modalLogin_tittle}>Ingresa tus datos</h3>
-                  <span class="close" id=${close} >&times;</span>
-                  <input type="email" id="loginEmail" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
-                  <input type="password" id="loginPassword" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
-                  <button id="modal_login_btn" class=${modal_login_btn} type="submit">Ingresar</button>
-                  <h4 class=${modalLogin_tittle}><a href="#">Recuperar contraseña</a></h4>
-                </div>
-            `;
+        <div class=${modalContent}>
+          <h3 class=${modalLogin_tittle}>Ingresa tus datos</h3>
+          <span class="close" id=${close} >&times;</span>
+          <input type="email" id="loginEmail" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
+          <input type="password" id="loginPassword" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
+          <button id="modal_login_btn" class=${modal_login_btn} type="submit">Ingresar</button>
+          <h4 class=${modalLogin_tittle}><a href="#">Recuperar contraseña</a></h4>
+        </div>
+      `;
 
       document.body.appendChild(modal);
 
@@ -123,17 +122,31 @@ export function Navbar() {
           alert("Please fill in all fields");
           return;
         }
-        const token = await login(email, password);
-        if (token) {
-          // localStorage.setItem("token", token);
+
+        try {
+          const response = await fetch("http://192.168.1.5:4000/auth/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+          });
+
+          if (!response.ok) {
+            throw new Error("Invalid credentials");
+          }
+
+          const { token } = await response.json();
+          localStorage.setItem("token", token);
           navigateTo("/home");
-        } else {
+        } catch (error) {
+          console.error("Error during login:", error);
           alert("Invalid credentials");
         }
       });
-    }; //Fin Funcion MiCuenta
+    };
 
-    //Modal registrarse
+    // Modal registrarse
     const $registrarse = document.getElementById("registrarse");
 
     $registrarse.onclick = () => {
@@ -143,18 +156,19 @@ export function Navbar() {
                 <div class=${modalContent}>
                   <h3 class=${modalRegister_tittle}>Registra tus datos</h3>
                   <span class="close" id=${close}>&times;</span>
-                  <form method="POST"class=${modal_register_form}>
-                    <input type="email" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
-                    <input type="text" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
+                  <form method="POST" class=${modal_register_form}>
+                    <input type="text" id="registerUsername" placeholder="Ingrese su nombre de usuario" class=${modalLogin_input}></input>
+                    <input type="email" id="registerEmail" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
+                    <input type="password" id="registerPassword" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
                     <h4 class=${select_profile}>Seleccione su perfil:</h4>
                     <div class=${modal_register_form_div}>
                       <label class=${modal_register_form_label}>
-                        Turista
-                        <input type="radio" id="tourist" name="profile" value="tourist"></input>
+                        User
+                        <input type="radio" id="user" name="profile" value="User"></input>
                       </label>
                       <label class=${modal_register_form_label}>
-                        Guía
-                        <input type="radio" id="guide" name="profile" value="guide">
+                        Guide
+                        <input type="radio" id="guide" name="profile" value="Guide">
                       </label>
                     </div>
                   </form>
@@ -179,11 +193,29 @@ export function Navbar() {
           document.body.removeChild(modal);
         }
       };
+
+      const registerBtn = document.getElementById("register");
+      registerBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const username = document.getElementById("registerUsername").value;
+        const email = document.getElementById("registerEmail").value;
+        const password = document.getElementById("registerPassword").value;
+        const role = document.querySelector(
+          'input[name="profile"]:checked'
+        ).value;
+
+        if (!formValidator(username, email, password)) {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        await registerUser(username, email, password, role);
+      });
     };
-  }; //Fin Logic
+  };
 
   return { html: navContent, logic };
-} //fin Exportacion
+}
 
 async function login(email, password) {
   try {
@@ -206,5 +238,34 @@ async function login(email, password) {
   } catch (error) {
     console.error("Login failed:", error);
     return null;
+  }
+}
+
+async function registerUser(username, email, password, role) {
+  const url = "http://192.168.1.5:4000/auth/register";
+  const data = {
+    username,
+    email,
+    password,
+    role,
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${await response.text()}`);
+    }
+
+    const responseData = await response.json();
+    console.log("Usuario registrado exitosamente:", responseData);
+  } catch (error) {
+    console.error("Error al registrar usuario:", error.message);
   }
 }
