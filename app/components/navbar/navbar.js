@@ -92,59 +92,60 @@ export function Navbar() {
           <h4 class=${modalLogin_tittle}><a href="#">Recuperar contraseña</a></h4>
         </div>
       `;
-
+    
       document.body.appendChild(modal);
-
+    
       modal.style.display = "block";
-
+    
       const closeBtn = modal.querySelector(".close");
-
+    
       closeBtn.onclick = function () {
         modal.style.display = "none";
         document.body.removeChild(modal);
       };
-
+    
       window.onclick = function (event) {
         if (event.target === modal) {
           modal.style.display = "none";
           document.body.removeChild(modal);
         }
       };
-
+    
       const access = document.getElementById("modal_login_btn");
-
+    
       access.addEventListener("click", async (e) => {
         e.preventDefault();
         const email = document.getElementById("loginEmail").value;
         const password = document.getElementById("loginPassword").value;
-
+    
         if (!formValidator(email, password)) {
           alert("Please fill in all fields");
           return;
         }
-
+        
         try {
-          const response = await fetch("http://192.168.1.5:4000/auth/login", {
-            method: "POST",
+          const response = await fetch('http://192.168.1.5:4000/auth/login', {
+            method: 'POST',
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ email, password })
           });
-
+    
           if (!response.ok) {
-            throw new Error("Invalid credentials");
+            throw new Error('Invalid credentials');
           }
-
+    
           const { token } = await response.json();
-          localStorage.setItem("token", token);
+          localStorage.setItem('token', token);
           navigateTo("/home");
         } catch (error) {
-          console.error("Error during login:", error);
+          console.error('Error during login:', error);
           alert("Invalid credentials");
         }
       });
     };
+    
 
     // Modal registrarse
     const $registrarse = document.getElementById("registrarse");
@@ -200,9 +201,7 @@ export function Navbar() {
         const username = document.getElementById("registerUsername").value;
         const email = document.getElementById("registerEmail").value;
         const password = document.getElementById("registerPassword").value;
-        const role = document.querySelector(
-          'input[name="profile"]:checked'
-        ).value;
+        const role = document.querySelector('input[name="profile"]:checked').value;
 
         if (!formValidator(username, email, password)) {
           alert("Please fill in all fields");
@@ -219,7 +218,7 @@ export function Navbar() {
 
 async function login(email, password) {
   try {
-    const response = await fetch("http://localhost:4000/api/auth/login", {
+    const response = await fetch("http://192.168.1.5:4000/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
