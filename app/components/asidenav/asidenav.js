@@ -14,7 +14,7 @@ export function asidenav(){
             <h3>User</h3>
             <a href="/home" class="button_home">Home</a>
             <a href="/edit" class="button_edit_admin">See my tours/ Edit my tours</a>
-            <a class="button_see_tours">See Tours</a>
+            <a href="/seeTours" class="button_see_tours">See Tours</a>
             <a href="/create" class="button_create_tour">Create</a>
             <a class="button_ascend_admin">User Ascend</a>
             <a class="button_see_tours">Log out</a>

@@ -15,7 +15,7 @@
   
 .contain_text_description{
     width: 70%;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,13 +61,11 @@
 }
 
 .target_description_dash{
-    margin-top: 20px;
+    margin-top: 40px;
     justify-content: center;
 }
 
 .container{
-    overflow: scroll;
-    display: flex;
     flex-direction: column
     
 }
@@ -112,6 +110,7 @@
 
 .formTourDescriptionTexArea{
     border-radius: 5px;
+    padding: 30px;
 }
 
 .formTour div input{
@@ -174,7 +173,7 @@ input:focus, textarea:focus {
 
 .formTourDescriptionTexArea{
     width: auto;
-    height: 100px;
+    height: 150px;
 }
 
 .formTour .formTourButtons{

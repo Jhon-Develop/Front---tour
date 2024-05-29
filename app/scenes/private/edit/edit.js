@@ -21,9 +21,8 @@ import {
 export function editPage() {
   const cards = "cards"; // Define la variable cards antes de usarla
 
-  const $content = `
+  const $content = /*html*/ `
         <div id="${cards}" class=${container}>
-            
         </div>
     `;
 
@@ -38,9 +37,9 @@ export function editPage() {
     async function getLetterInformation() {
       try {
         const resolve = await fetch(
-          "http://192.168.89.27:4000/tours/:id",
+          "https://jsonplaceholder.typicode.com/users",
           {
-            method: "PUT",
+            method: "GET",
             headers: {
               "Content-Type": "application/json",
             },
@@ -65,7 +64,7 @@ export function editPage() {
     getLetterInformation().then((promiseResolve) => {
       if (promiseResolve) {
         // Si la promesa se resuelve correctamente, le paso la información a showInformation
-        showInformation(promiseResolve.slice(1, 5));
+        showInformation(promiseResolve.slice(1, 4));
       } else {
         console.log("Hubo un error al obtener los datos");
       }
@@ -127,7 +126,7 @@ export function editPage() {
                         <input type="text" value="${data.name}">
                     </div>
                     <div>
-                        <label for="">$Descripcion:</label>
+                        <label for="">Descripcion:</label>
                         <textarea maxlength="250" class=${formTourDescriptionTexArea}></textarea>
                     </div>
                     <div class=${formTourCategory}>
