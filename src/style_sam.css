@@ -459,7 +459,6 @@ img {
   text-decoration: none !important;
 }
 /* Finish samuel */
-
 /********* Start Responsive ************/
 /* Start francisco */
 
@@ -531,10 +530,7 @@ img {
   .info_adress {
     padding: 10px;
   }
-
   /* --------------------------section dashboard----------- */
-
-
   .menu_dash_admin {
     justify-content: flex-start;
     align-items: ;
