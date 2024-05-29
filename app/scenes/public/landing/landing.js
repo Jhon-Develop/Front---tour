@@ -28,6 +28,8 @@ import {
     places,
     searchBar,
     searchWhitInputUser,
+    about_us,
+    text_about_us
 } from "./landing.css";
 import { footerContent } from "../../../components/footer/footer";
 import img from "/app/assets/img/torre.png";
@@ -717,7 +719,13 @@ export function landingPage() {
           <div id="see_more" class=${see_more}>
               <button>Ver más</button>
           </div>
-      </article>
+        </article>
+
+        <section class=${about_us}>
+            <h2> Descubre Quiénes Somos y Qué Nos Impulsa </h2>
+            <h3>Bienvenido a HIMA, tu puerta de entrada al mundo de los viajes virtuales. En HIMA, nos apasiona conectar a las personas con experiencias únicas en todo el mundo, desde la comodidad de sus hogares.</h3>
+            <h3 class=${text_about_us}>Nuestra plataforma virtual de tours está diseñada para llevarte a lugares asombrosos, guiados por expertos locales apasionados por compartir su conocimiento y cultura. Ya sea que desees explorar las maravillas históricas de una ciudad antigua, sumergirte en la naturaleza salvaje de lugares remotos o disfrutar de las delicias culinarias de diferentes culturas, en HIMA tenemos el tour perfecto para ti.</h3>
+        </section>
   
   
       ${footerContent}

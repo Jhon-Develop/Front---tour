@@ -288,6 +288,35 @@
     background-color: #043459;
 }
 
+.about_us {
+    height: 60vh;
+    width: 100%;
+    display: flex  ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.about_us h2 {
+    width: 70%;
+    padding: 20px;
+    font-size: 27px;
+    color: #254453;
+    border-top: solid 1px #254453;
+}
+
+.about_us h3 {
+    font-size: 20px;
+    color: #254453;
+    width: 70%;
+}
+
+.text_about_us {
+    border-bottom: 1px solid #254453;
+}
+
 
 
 /* STYLES CART MORE INFORMATION*/
@@ -625,5 +654,13 @@
         font-family: "Roboto", sans-serif;
         box-shadow: 0px 2px 2px 0px;
         padding: 0.5rem;
+    }
+
+    .about_us {
+        height: fit-content;
+    }
+
+    .about_us h3 {
+        font-size: 15px;
     }
 }

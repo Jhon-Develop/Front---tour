@@ -1,123 +1,122 @@
-.containerFormTour{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
+.containerFormTour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.formTour{
-    text-decoration: #254453;
-    display: flex;
-    flex-direction: column ;
-    align-items: center;
-    gap: 15px;
-    width: 800px;
-    border-radius: 5px;
-    padding: 20px;
-    
+.formTour {
+  text-decoration: #254453;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 800px;
+  border-radius: 5px;
+  padding: 20px;
 }
 
-.formTour label{
-    padding: 3px 0 5px;
+.formTour label {
+  padding: 3px 0 5px;
 }
 
 .formTour div {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
-.formTourDescriptionTexArea{
-    border-radius: 5px;
+.formTourDescriptionTexArea {
+  border-radius: 5px;
 }
 
-.formTour div input{
-    padding: 5px 5px;
-    width: 80%;
-    border-radius: 5px;
-    border: 1px solid gray;
-    font-size: 1em;
+.formTour div input {
+  padding: 5px 5px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 1em;
 }
 
-input:focus, textarea:focus {
-    background-color: var(--beige-);
+input:focus,
+textarea:focus {
+  background-color: var(--beige-);
 }
 
-.formTour .formTourButtons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.formTour .formTourButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.formTour .formTourCategory input, .formTour .formTourLength input, .formTourPrice input  {
-    max-width: 150px;
+.formTour .formTourCategory input,
+.formTour .formTourLength input,
+.formTourPrice input {
+  max-width: 150px;
 }
 
-.formTour .formTourNumberPeople .numberPeople{
-    max-width: 100px;
+.formTour .formTourNumberPeople .numberPeople {
+  max-width: 100px;
 }
 
-.formTour .formTourSchedule{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+.formTour .formTourSchedule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 .formTour div .formTourSchedule input {
-    max-width: 200px;
+  max-width: 200px;
 }
 
-.containerFormTour .formTour .formTourDivSchedule .addedSchedule{
-    max-width: 200px;
-
-
+.containerFormTour .formTour .formTourDivSchedule .addedSchedule {
+  max-width: 200px;
 }
-
 
 .formTour div .formTourSchedule button {
-    width: 20px;
-    height: 20px;
-    color: var(--beige-);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 1em;
-    background-color: var(--blue-);
-    border: #254453 1px solid;
+  width: 20px;
+  height: 20px;
+  color: var(--beige-);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1em;
+  background-color: var(--blue-);
+  border: #254453 1px solid;
 }
 
-.formTourDescriptionTexArea{
-    width: auto;
-    height: 100px;
+.formTourDescriptionTexArea {
+  width: auto;
+  height: 100px;
 }
 
-.formTour .formTourButtons{
-    display: flex;
-    flex-direction: row;
+.formTour .formTourButtons {
+  display: flex;
+  flex-direction: row;
 }
 
 .formTourButtons {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .formTourButtons button {
-    color: var(--beige-);
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 0.9em;
-    background-color: var(--blue-);
-    margin: 20px 0 20px;
-    border: #254453 1px solid;
+  color: var(--beige-);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.9em;
+  background-color: var(--blue-);
+  margin: 20px 0 20px;
+  border: #254453 1px solid;
 }
 
-.formTourButtons button:hover, .formTour div .formTourSchedule button:hover{
-    background-color: var(--beige-);
-    color: var(--blue-);
+.formTourButtons button:hover,
+.formTour div .formTourSchedule button:hover {
+  background-color: var(--beige-);
+  color: var(--blue-);
 }
