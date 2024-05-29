@@ -41,16 +41,16 @@ export async function Router() {
     const params = new URLSearchParams(window.location.search);
   
     // Verificar autenticación antes de decidir qué componente mostrar
-    // if (path === '/') {
-    //   const token = localStorage.getItem('token');
-    //   if (token) {
-    //     const [isValid] = await verifyToken(token);
-    //     if (isValid) {
-    //       navigateTo('/home');
-    //       return;
-    //     }
-    //   }
-    // }
+    if (path === '/') {
+      const token = localStorage.getItem('token');
+      if (token) {
+        const [isValid] = await verifyToken(token);
+        if (isValid) {
+          navigateTo('/home');
+          return;
+        }
+      }
+    }
   
     // Comprobar rutas públicas y privadas
     const publicRoute = routes.public.find(r => r.path === path);
