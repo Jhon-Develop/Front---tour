@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  /* border: solid 1px red; */
+  border: solid 1px red;
   font-family: var(--font-family-title);
 }
 
@@ -364,7 +364,100 @@ img {
 .border_target_char {
   border-right: solid 1px #fff8dc;
 }
+/*--------------------- SECCION FORO ------------------- */
+.section_foro {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.section_foro h2 {
+  font-size: 27px;
+  padding: 20px 0px;
+  color: var(--blue-);
+}
+/*--------comentarios realizados ---- */
+.contain_comment {
+  background-color: var(--white-);
+  width: 80%;
+  min-height: fit-content;
+  padding: 20px 40px;
+  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  border: solid 1px #254453;
+}
+
+.contain_comment h4 {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--blue-);
+}
+
+.contain_text_comment {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--blue-);
+  min-height: fit-content;
+}
+
+.contain_text_comment p {
+  font-size: 10px;
+  min-height: fit-content;
+  color: var(--beige-);
+}
+
+/*--------textarea de comentarios---- */
+.input_contain_commet{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_contain_commet h3 {
+  padding: 20px 0px;
+  color: var(--blue-);
+}
+
+.input_contain_commet textarea{
+  height: 80px;
+  padding: 10px;
+  color: var(--blue-);
+  
+}
+
+.input_contain_commet button {
+  background-color: var(--blue-);
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  color: var(--white-);
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.5);
+  margin: 20px 0px;
+}
+
+.input_contain_commet button:hover {
+  font-weight: bold;
+  color: var(--blue-);
+  background-color: var(--white-);
+  border-color: var(--blue-) 1px solid;
+  cursor: pointer;
+}
+
+.link_a_comment{
+  text-decoration: none !important;
+}
 /* Finish samuel */
 
 /********* Start Responsive ************/
