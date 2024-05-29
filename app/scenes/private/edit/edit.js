@@ -134,16 +134,12 @@ export function editPage() {
                         <label for="">Categoría:</label>
                         <input type="text" value=${data.category}>
                     </div>
-                    <div class=${formTourLength}>
-                        <label for="">Duración (Horas):</label>
-                        <input type="number" min="1" >
-                    </div>
                     <div class=${formTourNumberPeople}>
                         <label for="">Capacidad de personas: </label>
                         <input type="number" min="1" class="numberPeople" value=${data.capacity}>
                     </div>
                     <div id=${formTourDivSchedule}>
-                        <label for="">Horario: </label>
+                        <label for="">Fecha: </label>
                     <div class=${formTourSchedule}>
                         <input type="text" class="addScheduleInput" value=${data.date} >
                         <button type="button" class="addSchedule" id="addSchedule">&#43;</button>
