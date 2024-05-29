@@ -57,7 +57,7 @@ npm start
 ```
 Una vez que la aplicación se esté ejecutando, podrás verla en acción abriendo tu navegador web y navegando a http://localhost:3000.
 
-### Estructura del Proyecto
+# Estructura del Proyecto
 
 HIMA/
 │
@@ -66,25 +66,24 @@ HIMA/
 ├── app/                        # Carpeta de código fuente
 │   ├── assets/                 # Imágenes, fuentes, etc.
 │   ├── components/             # Componentes reutilizables globales
-│   │   ├── Layout/         # Dashboard 
-│   │   ├── asidenav/       # Menú lateral
-│   │   └── footer/         # Pie de pagina de la pagina
+│   │   ├── Layout/             # Dashboard
+│   │   ├── asidenav/           # Menú lateral
+│   │   └── footer/             # Pie de página de la página
 │   ├── scenes/                 # Diferentes escenas para el dashboard
 │   ├── styles/                 # Estilos globales
 │   ├── index.js                # Archivo principal de JavaScript
 │   ├── App.js                  # Archivo principal de nuestra app SPA
 │   └── Router.js               # Archivo de configuración de rutas de nuestra app SPA
-    └── Api                     # Chart de google (Sistema estadistico)
+│   └── Api                     # Chart de Google (Sistema estadístico)
 │
 ├── .babelrc                    # Archivo de configuración de Babel
 ├── .gitignore                  # Archivo de ocultar archivos/directorios a Git
 ├── index.html                  # Archivo principal de HTML
-├── package-lock.json          # Dependencias del proyecto con versiones
-├── request.http       
-├── package.json                 # Dependencias del proyecto y scripts
+├── package-lock.json           # Dependencias del proyecto con versiones
+├── request.http                
+├── package.json                # Dependencias del proyecto y scripts
 ├── webpack.config.js           # Archivo de configuración de Webpack
 └── README.md                   # Documentación del proyecto
-
 
 ### Integrantes del Equipo
 
