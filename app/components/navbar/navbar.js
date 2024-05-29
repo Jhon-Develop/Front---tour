@@ -1,5 +1,6 @@
 import logo from "/app/assets/img/logo.png";
-import { formValidator } from "../../../../../helpers";
+import { navigateTo } from "/app/Router.js";
+import { formValidator } from "/app/helpers/form-validator.js";
 
 import {
   modalLogin,
@@ -86,7 +87,7 @@ export function Navbar() {
                   <h3 class=${modalLogin_tittle}>Ingresa tus datos</h3>
                   <span class="close" id=${close} >&times;</span>
                   <input type="email" id="loginEmail" placeholder="Ingrese su correo" class=${modalLogin_input}></input>
-                  <input type="text" id="loginPassword" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
+                  <input type="password" id="loginPassword" placeholder="Ingrese la contraseña" class=${modalLogin_input}></input>
                   <button id="modal_login_btn" class=${modal_login_btn} type="submit">Ingresar</button>
                   <h4 class=${modalLogin_tittle}><a href="#">Recuperar contraseña</a></h4>
                 </div>
@@ -109,41 +110,25 @@ export function Navbar() {
           document.body.removeChild(modal);
         }
       };
-      // const $testiar = document.getElementById("modal_login_btn");
 
-      // $testiar.onclick = function () {
-      //   alert("Acceso concedido");
-      // };
       const access = document.getElementById("modal_login_btn");
 
-      access.addEventListener("click", (e) => {
+      access.addEventListener("click", async (e) => {
         e.preventDefault();
         const email = document.getElementById("loginEmail").value;
         const password = document.getElementById("loginPassword").value;
 
-        console.log(email, password);
-
-        async function getLetterInformation() {
-          try {
-            const response = await fetch(
-              "https://jsonplaceholder.typicode.com/users"
-            );
-            // Si el status de la respuesta es distinto de 200 y 299, muestro un error
-            if (!response.ok) {
-              throw new Error(
-                `Hubo un error: Status ${response.status}\nStatus Text ${response.statusText}`
-              );
-            }
-            // Si el status de la respuesta esta entre 200 y 299 convierto la respuesta ah Json
-            const data = await response.json();
-            console.log({ data });
-
-            return data;
-          } catch (error) {
-            console.log(error);
-          }
+        if (!formValidator(email, password)) {
+          alert("Please fill in all fields");
+          return;
         }
-        getLetterInformation();
+        const token = await login(email, password);
+        if (token) {
+          // localStorage.setItem("token", token);
+          navigateTo("/home");
+        } else {
+          alert("Invalid credentials");
+        }
       });
     }; //Fin Funcion MiCuenta
 
@@ -197,4 +182,28 @@ export function Navbar() {
   }; //Fin Logic
 
   return { html: navContent, logic };
+} //fin Exportacion
+
+async function login(email, password) {
+  try {
+    const response = await fetch("http://localhost:4000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      const errorMessage = await response.text();
+      throw new Error(`Error ${response.status}: ${errorMessage}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+    return data.token;
+  } catch (error) {
+    console.error("Login failed:", error);
+    return null;
+  }
 }
